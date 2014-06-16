@@ -6,6 +6,8 @@ UIColor+Hex, now Swift.
 =================
 Convenience method for creating autoreleased color using RGBA hex string.
 
-    var strokeColor = UIColor(rgba: "#ffcc00").CGColor
+    var strokeColor = UIColor(rgba: "#ffcc00").CGColor // Solid color
+    
+    var fillColor = UIColor(rgba: "#ffcc00dd").CGColor // Color with alpha
     
 See more in [RSBarcodes](https://github.com/yeahdongcn/RSBarcodes_Swift)
