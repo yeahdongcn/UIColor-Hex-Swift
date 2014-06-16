@@ -10,4 +10,4 @@ Convenience method for creating autoreleased color using RGBA hex string.
     
     var fillColor = UIColor(rgba: "#ffcc00dd").CGColor // Color with alpha
     
-See more in [RSBarcodes](https://github.com/yeahdongcn/RSBarcodes_Swift)
+See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
