@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/grant/swift-cheat-sheet/gh-pages/img/swift-hero.png">
+  <img src="https://raw.githubusercontent.com/yeahdongcn/UIColor-Hex-Swift/master/home-hero-swift-hero.png">
 </p>
 
 UIColor+Hex, now Swift.
