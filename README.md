@@ -10,6 +10,8 @@ Convenience method for creating autoreleased color using RGBA hex string.
     
     var fillColor = UIColor(rgba: "#ffcc00dd").CGColor // Color with alpha
 
-    var backgroundColor = UIColor(rgba: "#FFF").CGColor // Supports shorthand 3 digit representation
+    var backgroundColor = UIColor(rgba: "#FFF") // Supports shorthand 3 character representation
+
+    var menuTextColor = UIColor(rgba: "#013E") // Supports shorthand 4 character representation (with alpha)
     
 See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
