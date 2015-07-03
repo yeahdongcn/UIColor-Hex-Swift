@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0"
   s.summary      = "Convenience method for creating autoreleased color using RGBA hex string."
   s.homepage     = "https://github.com/yeahdongcn/UIColor-Hex-Swift"
-  s.license      = { :type => 'MIT', :file => 'LICENSE.md' }
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "R0CKSTAR" => "yeahdongcn@gmail.com" }
   s.platform     = :ios, '8.0'
   s.source       = { :git => 'https://github.com/yeahdongcn/UIColor-Hex-Swift.git', :tag => "#{s.version}" }
