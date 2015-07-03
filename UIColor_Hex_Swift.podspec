@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "UIColor-Hex-Swift"
+  s.name         = "UIColor_Hex_Swift"
   s.version      = "1.0"
   s.summary      = "Convenience method for creating autoreleased color using RGBA hex string."
   s.homepage     = "https://github.com/yeahdongcn/UIColor-Hex-Swift"
