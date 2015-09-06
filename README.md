@@ -28,6 +28,12 @@ pod 'UIColor_Hex_Swift', '~> 1.1'
 
 *(CocoaPods v0.36 or later required. See [this blog post](http://blog.cocoapods.org/Pod-Authors-Guide-to-CocoaPods-Frameworks/) for details.)*
 
-=================
+###[Carthage](http://github.com/Carthage/Carthage)
 
+Simply add the following line to your `Cartfile`:
+
+```ruby
+github "yeahdongcn/UIColor_Hex_Swift" >= 1.1
+```
+=================
 See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
