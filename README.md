@@ -33,7 +33,7 @@ pod 'UIColor_Hex_Swift', '~> 1.1'
 Simply add the following line to your `Cartfile`:
 
 ```ruby
-github "yeahdongcn/UIColor_Hex_Swift" >= 1.1
+github "yeahdongcn/UIColor-Hex-Swift" >= 1.1
 ```
 =================
 See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
