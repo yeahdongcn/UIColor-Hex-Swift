@@ -10,6 +10,7 @@
 		AA75613C1BBE792B00E12806 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA75613B1BBE792B00E12806 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA7561431BBE792B00E12806 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7561381BBE792B00E12806 /* HEXColor.framework */; settings = {ASSET_TAGS = (); }; };
 		AA7561481BBE792B00E12806 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7561471BBE792B00E12806 /* HEXColorTests.swift */; };
+		AA7561531BBE79E700E12806 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7561521BBE79E700E12806 /* UIColorExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		AA7561421BBE792B00E12806 /* HEXColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HEXColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7561471BBE792B00E12806 /* HEXColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEXColorTests.swift; sourceTree = "<group>"; };
 		AA7561491BBE792B00E12806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA7561521BBE79E700E12806 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				AA75613B1BBE792B00E12806 /* HEXColor.h */,
 				AA75613D1BBE792B00E12806 /* Info.plist */,
+				AA7561521BBE79E700E12806 /* UIColorExtension.swift */,
 			);
 			path = HEXColor;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 		AA75612F1BBE792B00E12806 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Recruit Lifestyle Co., Ltd.";
 				TargetAttributes = {
@@ -193,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7561531BBE79E700E12806 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +312,7 @@
 		AA75614D1BBE792B00E12806 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.recruit-lifestyle.HEXColor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		AA75614E1BBE792B00E12806 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
