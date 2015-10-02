@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "R0CKSTAR" => "yeahdongcn@gmail.com" }
   s.platform     = :ios, '8.0'
   s.source       = { :git => 'https://github.com/yeahdongcn/UIColor-Hex-Swift.git', :tag => "#{s.version}" }
-  s.source_files = '*.swift'
+  s.source_files = '**/*.swift'
   s.frameworks   = ['UIKit']
   s.requires_arc = true
 end
