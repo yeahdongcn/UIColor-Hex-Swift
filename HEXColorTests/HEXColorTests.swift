@@ -21,69 +21,25 @@ class HEXColorTests: XCTestCase {
         super.tearDown()
     }
     
-    // MARK - Normal
-    func testThreeDigits() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x123).rgba()
-        XCTAssertEqual(red, 0x11)
-        XCTAssertEqual(gree, 0x22)
-        XCTAssertEqual(blue, 0x33)
+    /*
+    Test cases
+    * Minimum: 0x000000
+    */
+    
+    // MARK: - Three-digit
+    func testThreeDigitMin() {
+        let (red, green, blue, alpha) = UIColor(hex3: 0x000).rgba()
+        XCTAssertEqual(red, 0)
+        XCTAssertEqual(green, 0)
+        XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0xFF)
     }
     
-    func testFourDigits() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x1234).rgba()
-        XCTAssertEqual(red, 0x11)
-        XCTAssertEqual(gree, 0x22)
-        XCTAssertEqual(blue, 0x33)
-        XCTAssertEqual(alpha, 0x44)
-    }
-    
-    func testSixDigits() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x123456).rgba()
-        XCTAssertEqual(red, 0x12)
-        XCTAssertEqual(gree, 0x34)
-        XCTAssertEqual(blue, 0x56)
-        XCTAssertEqual(alpha, 0xFF)
-    }
-    
-    func testEightDigits() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x12345678).rgba()
-        XCTAssertEqual(red, 0x12)
-        XCTAssertEqual(gree, 0x34)
-        XCTAssertEqual(blue, 0x56)
-        XCTAssertEqual(alpha, 0x78)
-    }
-    
-    // Error
-    func testOneDigit() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x1).rgba()
-        XCTAssertEqual(red, 0xFF)
-        XCTAssertEqual(gree, 0xFF)
-        XCTAssertEqual(blue, 0xFF)
-        XCTAssertEqual(alpha, 0xFF)
-    }
-    
-    func testTwoDigits() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x12).rgba()
-        XCTAssertEqual(red, 0xFF)
-        XCTAssertEqual(gree, 0xFF)
-        XCTAssertEqual(blue, 0xFF)
-        XCTAssertEqual(alpha, 0xFF)
-    }
-    
-    func testFiveDigits() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x12345).rgba()
-        XCTAssertEqual(red, 0xFF)
-        XCTAssertEqual(gree, 0xFF)
-        XCTAssertEqual(blue, 0xFF)
-        XCTAssertEqual(alpha, 0xFF)
-    }
-    
-    func testSevenDigits() {
-        let (red, gree, blue, alpha) = UIColor(hex: 0x1234567).rgba()
-        XCTAssertEqual(red, 0xFF)
-        XCTAssertEqual(gree, 0xFF)
-        XCTAssertEqual(blue, 0xFF)
+    func testThreeDigitMin() {
+        let (red, green, blue, alpha) = UIColor(hex3: 0x000).rgba()
+        XCTAssertEqual(red, 0)
+        XCTAssertEqual(green, 0)
+        XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0xFF)
     }
 }
