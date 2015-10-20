@@ -8,6 +8,17 @@
 
 import UIKit
 
+/**
+MissingHashMarkAsPrefix: "Invalid RGB string, missing '#' as prefix"
+UnableToScanHexValue: "Scan hex error"
+MismatchedHexStringLength: "Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8"
+*/
+public enum InputError : ErrorType {
+    case MissingHashMarkAsPrefix,
+    UnableToScanHexValue,
+    MismatchedHexStringLength
+}
+
 extension UIColor {
     /**
     The shorthand three-digit hexadecimal representation of color.
@@ -64,5 +75,40 @@ extension UIColor {
         let blue  = CGFloat((hex8 & 0x0000FF00) >>  8) / divisor
         let alpha = CGFloat( hex8 & 0x000000FF       ) / divisor
         self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    /**
+    The rgba string representation of color with alpha of the form #RRGGBBAA/#RRGGBB.
+    
+    - parameter rgba: String value.
+    */
+    public convenience init(rgba: String) throws {
+        guard rgba.hasPrefix("#") else {
+            throw InputError.MissingHashMarkAsPrefix
+        }
+        
+        guard let hexString: String = rgba.substringFromIndex(rgba.startIndex.advancedBy(1)),
+            var   hexValue:  UInt64 = 0
+            where NSScanner(string: hexString).scanHexLongLong(&hexValue) else {
+                throw InputError.UnableToScanHexValue
+        }
+        
+        guard hexString.characters.count  == 3
+            || hexString.characters.count == 4
+            || hexString.characters.count == 6
+            || hexString.characters.count == 8 else {
+                throw InputError.MismatchedHexStringLength
+        }
+        
+        switch (hexString.characters.count) {
+        case 3:
+            self.init(hex3: UInt16(hexValue))
+        case 4:
+            self.init(hex4: UInt16(hexValue))
+        case 6:
+            self.init(hex6: UInt32(hexValue))
+        default:
+            self.init(hex8: UInt32(hexValue))
+        }
     }
 }
