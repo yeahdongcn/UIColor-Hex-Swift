@@ -13,7 +13,7 @@ MissingHashMarkAsPrefix: "Invalid RGB string, missing '#' as prefix"
 UnableToScanHexValue: "Scan hex error"
 MismatchedHexStringLength: "Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8"
 */
-public enum InputError : ErrorType {
+public enum UIColorInputError : ErrorType {
     case MissingHashMarkAsPrefix,
     UnableToScanHexValue,
     MismatchedHexStringLength
@@ -84,20 +84,20 @@ extension UIColor {
     */
     public convenience init(rgba: String) throws {
         guard rgba.hasPrefix("#") else {
-            throw InputError.MissingHashMarkAsPrefix
+            throw UIColorInputError.MissingHashMarkAsPrefix
         }
         
         guard let hexString: String = rgba.substringFromIndex(rgba.startIndex.advancedBy(1)),
             var   hexValue:  UInt64 = 0
             where NSScanner(string: hexString).scanHexLongLong(&hexValue) else {
-                throw InputError.UnableToScanHexValue
+                throw UIColorInputError.UnableToScanHexValue
         }
         
         guard hexString.characters.count  == 3
             || hexString.characters.count == 4
             || hexString.characters.count == 6
             || hexString.characters.count == 8 else {
-                throw InputError.MismatchedHexStringLength
+                throw UIColorInputError.MismatchedHexStringLength
         }
         
         switch (hexString.characters.count) {

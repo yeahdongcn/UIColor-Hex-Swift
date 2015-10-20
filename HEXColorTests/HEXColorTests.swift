@@ -231,11 +231,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorMissingHashMarkAsPrefix() {
         do {
             let _ = try UIColor(rgba: "FFFFFFFF")
-        } catch InputError.MissingHashMarkAsPrefix {
+        } catch UIColorInputError.MissingHashMarkAsPrefix {
             XCTAssertTrue(true)
-        } catch InputError.UnableToScanHexValue {
+        } catch UIColorInputError.UnableToScanHexValue {
             XCTAssertTrue(false)
-        } catch InputError.MismatchedHexStringLength {
+        } catch UIColorInputError.MismatchedHexStringLength {
             XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(false)
@@ -245,11 +245,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorMismatchedHexStringLength() {
         do {
             let _ = try UIColor(rgba: "#FFFFFFF")
-        } catch InputError.MissingHashMarkAsPrefix {
+        } catch UIColorInputError.MissingHashMarkAsPrefix {
             XCTAssertTrue(false)
-        } catch InputError.UnableToScanHexValue {
+        } catch UIColorInputError.UnableToScanHexValue {
             XCTAssertTrue(false)
-        } catch InputError.MismatchedHexStringLength {
+        } catch UIColorInputError.MismatchedHexStringLength {
             XCTAssertTrue(true)
         } catch {
             XCTAssertTrue(false)
@@ -259,11 +259,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorUnableToScanHexValue() {
         do {
             let _ = try UIColor(rgba: "#ONMPQRST")
-        } catch InputError.MissingHashMarkAsPrefix {
+        } catch UIColorInputError.MissingHashMarkAsPrefix {
             XCTAssertTrue(false)
-        } catch InputError.UnableToScanHexValue {
+        } catch UIColorInputError.UnableToScanHexValue {
             XCTAssertTrue(true)
-        } catch InputError.MismatchedHexStringLength {
+        } catch UIColorInputError.MismatchedHexStringLength {
             XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(false)
