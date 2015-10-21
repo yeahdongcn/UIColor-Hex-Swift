@@ -13,7 +13,7 @@ extension UIColor {
         
         guard (rgba.hasPrefix("#")) else{
             print("Invalid RGB string, missing '#' as prefix")
-            self.init(red:red, green:green, blue:blue, alpha:alpha)
+            self.init(red:0, green:0, blue:0, alpha:1)
             return
         }
         
