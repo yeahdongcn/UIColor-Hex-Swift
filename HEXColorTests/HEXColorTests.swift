@@ -36,7 +36,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#000").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -52,7 +52,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0x22)
         XCTAssertEqual(blue, 0x33)
         XCTAssertEqual(alpha, 0xFF / 2)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#123").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#123").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -68,7 +68,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#FFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFF").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -85,7 +85,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#0000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#0000").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -101,7 +101,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0x22)
         XCTAssertEqual(blue, 0x33)
         XCTAssertEqual(alpha, 0x44)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#1234").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#1234").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -117,7 +117,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#FFFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFF").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -135,7 +135,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#000000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#000000").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -151,7 +151,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0x34)
         XCTAssertEqual(blue, 0x56)
         XCTAssertEqual(alpha, 0xFF / 2)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#123456").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#123456").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -167,7 +167,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#FFFFFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFFFF").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -184,7 +184,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#00000000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#00000000").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -200,7 +200,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0x34)
         XCTAssertEqual(blue, 0x56)
         XCTAssertEqual(alpha, 0x78)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#12345678").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#12345678").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -216,7 +216,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba: "#FFFFFFFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFFFFFF").rgba() else {
             XCTAssertTrue(false)
             return
         }
@@ -230,7 +230,7 @@ class HEXColorTests: XCTestCase {
     
     func testStringInputErrorMissingHashMarkAsPrefix() {
         do {
-            let _ = try UIColor(rgba: "FFFFFFFF")
+            let _ = try UIColor(rgba_throws: "FFFFFFFF")
         } catch UIColorInputError.MissingHashMarkAsPrefix {
             XCTAssertTrue(true)
         } catch UIColorInputError.UnableToScanHexValue {
@@ -244,7 +244,7 @@ class HEXColorTests: XCTestCase {
     
     func testStringInputErrorMismatchedHexStringLength() {
         do {
-            let _ = try UIColor(rgba: "#FFFFFFF")
+            let _ = try UIColor(rgba_throws: "#FFFFFFF")
         } catch UIColorInputError.MissingHashMarkAsPrefix {
             XCTAssertTrue(false)
         } catch UIColorInputError.UnableToScanHexValue {
@@ -258,7 +258,7 @@ class HEXColorTests: XCTestCase {
     
     func testStringInputErrorUnableToScanHexValue() {
         do {
-            let _ = try UIColor(rgba: "#ONMPQRST")
+            let _ = try UIColor(rgba_throws: "#ONMPQRST")
         } catch UIColorInputError.MissingHashMarkAsPrefix {
             XCTAssertTrue(false)
         } catch UIColorInputError.UnableToScanHexValue {
@@ -268,6 +268,17 @@ class HEXColorTests: XCTestCase {
         } catch {
             XCTAssertTrue(false)
         }
+    }
+    
+    // MARK: - String (With default color)
+    
+    func testStringDefaultColor() {
+        var color = UIColor(rgba: "FFFFFFFF")
+        XCTAssertEqual(color, UIColor.clearColor())
+        color = UIColor(rgba: "#FFFFFFF")
+        XCTAssertEqual(color, UIColor.clearColor())
+        color = UIColor(rgba: "#ONMPQRST")
+        XCTAssertEqual(color, UIColor.clearColor())
     }
 }
 
