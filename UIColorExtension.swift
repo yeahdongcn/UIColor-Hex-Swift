@@ -13,7 +13,8 @@ extension UIColor {
         
         guard (rgba.hasPrefix("#")) else{
             print("Invalid RGB string, missing '#' as prefix")
-            return UIColor.blackColor()
+            self.init(red:red, green:green, blue:blue, alpha:alpha)
+            return
         }
         
         let index   = rgba.startIndex.advancedBy(1)
@@ -23,7 +24,8 @@ extension UIColor {
         
         guard (scanner.scanHexLongLong(&hexValue)) else{
             print("Scan hex error")
-            return UIColor.blackColor()
+            self.init(red:0, green:0, blue:0, alpha:1)
+            return
         }
         
         var red:   CGFloat = 0.0
