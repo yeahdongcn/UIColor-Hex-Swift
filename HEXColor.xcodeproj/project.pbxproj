@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AA06B50A1BC225210049FE14 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; settings = {ASSET_TAGS = (); }; };
+		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; };
 		AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5151BC225210049FE14 /* HEXColorTests.swift */; };
-		AA06B5231BC233F80049FE14 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5221BC233F80049FE14 /* UIColorExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		AA06B5231BC233F80049FE14 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5221BC233F80049FE14 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -312,6 +312,7 @@
 		AA06B51B1BC225210049FE14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +332,7 @@
 		AA06B51C1BC225210049FE14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
