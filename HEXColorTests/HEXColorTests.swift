@@ -280,6 +280,14 @@ class HEXColorTests: XCTestCase {
         color = UIColor(rgba: "#ONMPQRST")
         XCTAssertEqual(color, UIColor.clearColor())
     }
+
+    // MARK: - String output
+
+    func testStringOutput() {
+        let color = UIColor(red: CGFloat(0x22 / 255.0), green: CGFloat(0x44 / 255.0), blue: CGFloat(0x66 / 255.0), alpha: CGFloat(0x88 / 255.0))
+        XCTAssertEqual("#224466", color.hexStringWithAlpha(false))
+        XCTAssertEqual("#22446688", color.hexStringWithAlpha(true))
+    }
 }
 
 extension UIColor {

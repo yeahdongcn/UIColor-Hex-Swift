@@ -13,7 +13,9 @@ Convenience method for creating autoreleased color using RGBA hex string.
     var backgroundColor = UIColor(rgba: "#FFF") // Supports shorthand 3 character representation
 
     var menuTextColor = UIColor(rgba: "#013E") // Supports shorthand 4 character representation (with alpha)
-    
+
+    var hexString = UIColor.redColor().hexStringWithAlpha(false) // "#FF0000"
+
 ##Installation
 
 ###[CocoaPods](http://cocoapods.org)
