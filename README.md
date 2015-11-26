@@ -14,7 +14,7 @@ Convenience method for creating autoreleased color using RGBA hex string.
 
     var menuTextColor = UIColor(rgba: "#013E") // Supports shorthand 4 character representation (with alpha)
 
-    var hexString = UIColor.redColor().hexStringWithAlpha(false) // "#FF0000"
+    var hexString = UIColor.redColor().hexString(false) // "#FF0000"
 
 ##Installation
 
@@ -25,7 +25,7 @@ Simply add the following lines to your `Podfile`:
 # required by Cocoapods 0.36.0.rc.1 for Swift Pods
 use_frameworks! 
 
-pod 'UIColor_Hex_Swift', '~> 1.5'
+pod 'UIColor_Hex_Swift', '~> 1.6'
 ```
 
 *(CocoaPods v0.36 or later required. See [this blog post](http://blog.cocoapods.org/Pod-Authors-Guide-to-CocoaPods-Frameworks/) for details.)*
@@ -35,7 +35,7 @@ pod 'UIColor_Hex_Swift', '~> 1.5'
 Simply add the following line to your `Cartfile`:
 
 ```ruby
-github "yeahdongcn/UIColor-Hex-Swift" >= 1.5
+github "yeahdongcn/UIColor-Hex-Swift" >= 1.6
 ```
 =================
 See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
