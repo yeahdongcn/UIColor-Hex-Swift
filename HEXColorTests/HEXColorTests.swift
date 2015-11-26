@@ -280,6 +280,31 @@ class HEXColorTests: XCTestCase {
         color = UIColor(rgba: "#ONMPQRST")
         XCTAssertEqual(color, UIColor.clearColor())
     }
+
+    // MARK: - Hex string output
+
+    func testStringOutput() {
+        let color = UIColor(red: CGFloat(0x22 / 255.0), green: CGFloat(0x44 / 255.0), blue: CGFloat(0x66 / 255.0), alpha: CGFloat(0x88 / 255.0))
+        XCTAssertEqual("#224466", color.hexString(false))
+        XCTAssertEqual("#22446688", color.hexString(true))
+        
+        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellowColor());
+        XCTAssertEqual("#AABBCC", hexColor.hexString(false))
+        XCTAssertEqual("#AABBCCDD", hexColor.hexString(true))
+    }
+    
+    // MARK: - Desc
+    
+    func testDesc() {
+        let color = UIColor(red: CGFloat(0x22 / 255.0), green: CGFloat(0x44 / 255.0), blue: CGFloat(0x66 / 255.0), alpha: CGFloat(0x88 / 255.0))
+        XCTAssertEqual("#22446688", color.description)
+        XCTAssertEqual("#22446688", color.debugDescription)
+        
+        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellowColor());
+        XCTAssertEqual("#AABBCCDD", hexColor.description)
+        XCTAssertEqual("#AABBCCDD", hexColor.debugDescription)
+    }
+    
 }
 
 extension UIColor {

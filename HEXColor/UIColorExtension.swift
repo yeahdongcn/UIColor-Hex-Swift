@@ -124,4 +124,31 @@ extension UIColor {
         }
         self.init(CGColor: color.CGColor)
     }
+
+    /**
+    Hex string of a UIColor instance.
+
+    - parameter rgba: Whether the alpha should be included.
+    */
+    public func hexString(includeAlpha: Bool) -> String {
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        self.getRed(&r, green: &g, blue: &b, alpha: &a)
+        
+        if (includeAlpha) {
+            return String(format: "#%02X%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255), Int(a * 255))
+        } else {
+            return String(format: "#%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255))
+        }
+    }
+    
+    public override var description: String {
+        return self.hexString(true)
+    }
+    
+    public override var debugDescription: String {
+        return self.hexString(true)
+    }
 }
