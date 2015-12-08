@@ -25,7 +25,7 @@ class HEXColorTests: XCTestCase {
     Test cases
     * Minimum: 0x00000000
     * Step:    0x12345678
-      * Alpha:   0x123456, alpha = 0.5 (3-digit/6-digit)
+    * Alpha:   0x123456, alpha = 0.5 (3-digit/6-digit)
     * Maximum: 0xFFFFFFFF
     */
     
@@ -125,7 +125,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual(g, 0xFF)
         XCTAssertEqual(b, 0xFF)
         XCTAssertEqual(a, 0xFF)
-
+        
     }
     
     // MARK: - Six-digit
@@ -280,9 +280,9 @@ class HEXColorTests: XCTestCase {
         color = UIColor(rgba: "#ONMPQRST")
         XCTAssertEqual(color, UIColor.clearColor())
     }
-
+    
     // MARK: - Hex string output
-
+    
     func testStringOutput() {
         let color = UIColor(red: CGFloat(0x22 / 255.0), green: CGFloat(0x44 / 255.0), blue: CGFloat(0x66 / 255.0), alpha: CGFloat(0x88 / 255.0))
         XCTAssertEqual("#224466", color.hexString(false))
