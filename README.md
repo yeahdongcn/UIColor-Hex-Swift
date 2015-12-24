@@ -28,6 +28,11 @@ use_frameworks!
 pod 'UIColor_Hex_Swift', '~> 1.8'
 ```
 
+Then import it where you use it:
+```
+import UIColor_Hex_Swift
+```
+
 *(CocoaPods v0.36 or later required. See [this blog post](http://blog.cocoapods.org/Pod-Authors-Guide-to-CocoaPods-Frameworks/) for details.)*
 
 ###[Carthage](http://github.com/Carthage/Carthage)
