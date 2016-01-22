@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43BCBCC11C51BAFE00205107 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43BCBCC21C51BB0100205107 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5221BC233F80049FE14 /* UIColorExtension.swift */; };
 		AA06B50A1BC225210049FE14 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; };
 		AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5151BC225210049FE14 /* HEXColorTests.swift */; };
@@ -24,9 +26,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43BCBCB61C51BA3D00205107 /* HEXColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HEXColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43BCBCBA1C51BA3D00205107 /* watchOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "watchOS-Info.plist"; sourceTree = "<group>"; };
+		43BCBCBF1C51BAA800205107 /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
 		AA06B5061BC225210049FE14 /* HEXColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HEXColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA06B5091BC225210049FE14 /* HEXColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HEXColor.h; sourceTree = "<group>"; };
-		AA06B50B1BC225210049FE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA06B5101BC225210049FE14 /* HEXColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HEXColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA06B5151BC225210049FE14 /* HEXColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEXColorTests.swift; sourceTree = "<group>"; };
 		AA06B5171BC225210049FE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +38,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		43BCBCB21C51BA3D00205107 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA06B5021BC225210049FE14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43BCBCBE1C51BA9900205107 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43BCBCBF1C51BAA800205107 /* iOS-Info.plist */,
+				43BCBCBA1C51BA3D00205107 /* watchOS-Info.plist */,
+			);
+			name = "Supporting Files";
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		AA06B4FC1BC225210049FE14 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +87,7 @@
 			children = (
 				AA06B5061BC225210049FE14 /* HEXColor.framework */,
 				AA06B5101BC225210049FE14 /* HEXColorTests.xctest */,
+				43BCBCB61C51BA3D00205107 /* HEXColor.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,8 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				AA06B5091BC225210049FE14 /* HEXColor.h */,
-				AA06B50B1BC225210049FE14 /* Info.plist */,
 				AA06B5221BC233F80049FE14 /* UIColorExtension.swift */,
+				43BCBCBE1C51BA9900205107 /* Supporting Files */,
 			);
 			path = HEXColor;
 			sourceTree = "<group>";
@@ -92,6 +114,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		43BCBCB31C51BA3D00205107 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BCBCC11C51BAFE00205107 /* HEXColor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA06B5031BC225210049FE14 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,6 +133,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		43BCBCB51C51BA3D00205107 /* HEXColor-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43BCBCBD1C51BA3D00205107 /* Build configuration list for PBXNativeTarget "HEXColor-watchOS" */;
+			buildPhases = (
+				43BCBCB11C51BA3D00205107 /* Sources */,
+				43BCBCB21C51BA3D00205107 /* Frameworks */,
+				43BCBCB31C51BA3D00205107 /* Headers */,
+				43BCBCB41C51BA3D00205107 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HEXColor-watchOS";
+			productName = "HEXColor-watchOS";
+			productReference = 43BCBCB61C51BA3D00205107 /* HEXColor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		AA06B5051BC225210049FE14 /* HEXColor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA06B51A1BC225210049FE14 /* Build configuration list for PBXNativeTarget "HEXColor" */;
@@ -149,6 +197,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = P.D.Q.;
 				TargetAttributes = {
+					43BCBCB51C51BA3D00205107 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					AA06B5051BC225210049FE14 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
@@ -170,12 +221,20 @@
 			projectRoot = "";
 			targets = (
 				AA06B5051BC225210049FE14 /* HEXColor */,
+				43BCBCB51C51BA3D00205107 /* HEXColor-watchOS */,
 				AA06B50F1BC225210049FE14 /* HEXColorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		43BCBCB41C51BA3D00205107 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA06B5041BC225210049FE14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +252,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		43BCBCB11C51BA3D00205107 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BCBCC21C51BB0100205107 /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA06B5011BC225210049FE14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +287,46 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		43BCBCBB1C51BA3D00205107 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "HEXColor/Resources/watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pdq.HEXColor-watchOS";
+				PRODUCT_NAME = HEXColor;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		43BCBCBC1C51BA3D00205107 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "HEXColor/Resources/watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pdq.HEXColor-watchOS";
+				PRODUCT_NAME = HEXColor;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 		AA06B5181BC225210049FE14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -318,12 +425,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = HEXColor/Info.plist;
+				INFOPLIST_FILE = "HEXColor/Resources/iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HEXColor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -338,12 +445,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = HEXColor/Info.plist;
+				INFOPLIST_FILE = "HEXColor/Resources/iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HEXColor;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -371,6 +478,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43BCBCBD1C51BA3D00205107 /* Build configuration list for PBXNativeTarget "HEXColor-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43BCBCBB1C51BA3D00205107 /* Debug */,
+				43BCBCBC1C51BA3D00205107 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AA06B5001BC225210049FE14 /* Build configuration list for PBXProject "HEXColor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
