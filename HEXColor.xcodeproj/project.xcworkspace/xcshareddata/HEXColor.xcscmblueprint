@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9EDF01A7804EB52CCFC540C61D3368942DB9FDFD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F5B2A05A07F2DE9F756112E4AF6E636F6CF77DF0" : 0,
+    "9EDF01A7804EB52CCFC540C61D3368942DB9FDFD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7DE65E6C-8703-4C4E-9288-C1FA5108EF69",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F5B2A05A07F2DE9F756112E4AF6E636F6CF77DF0" : "..\/..",
+    "9EDF01A7804EB52CCFC540C61D3368942DB9FDFD" : "UIColor-Hex-Swift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HEXColor",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HEXColor.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bogidon\/UIColor-Hex-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EDF01A7804EB52CCFC540C61D3368942DB9FDFD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:atalapan\/unleashme-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F5B2A05A07F2DE9F756112E4AF6E636F6CF77DF0"
+    }
+  ]
+}
