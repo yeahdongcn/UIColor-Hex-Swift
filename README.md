@@ -22,7 +22,7 @@ Convenience method for creating autoreleased color using RGBA hex string.
 
 Simply add the following lines to your `Podfile`:
 ```ruby
-# required by Cocoapods 0.36.0.rc.1 for Swift Pods
+# required by CocoaPods 0.36.0.rc.1 for Swift Pods
 use_frameworks! 
 
 pod 'UIColor_Hex_Swift', '~> 1.8'
