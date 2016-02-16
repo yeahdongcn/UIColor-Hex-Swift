@@ -25,7 +25,7 @@ Simply add the following lines to your `Podfile`:
 # required by CocoaPods 0.36.0.rc.1 for Swift Pods
 use_frameworks! 
 
-pod 'UIColor_Hex_Swift', '~> 1.8'
+pod 'UIColor_Hex_Swift', '~> 1.9'
 ```
 
 Then import it where you use it:
@@ -40,7 +40,7 @@ import UIColor_Hex_Swift
 Simply add the following line to your `Cartfile`:
 
 ```ruby
-github "yeahdongcn/UIColor-Hex-Swift" >= 1.8
+github "yeahdongcn/UIColor-Hex-Swift" >= 1.9
 ```
 =================
 See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
