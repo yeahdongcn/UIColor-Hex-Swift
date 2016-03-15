@@ -93,13 +93,6 @@ extension UIColor {
                 throw UIColorInputError.UnableToScanHexValue
         }
         
-        guard hexString.characters.count  == 3
-            || hexString.characters.count == 4
-            || hexString.characters.count == 6
-            || hexString.characters.count == 8 else {
-                throw UIColorInputError.MismatchedHexStringLength
-        }
-        
         switch (hexString.characters.count) {
         case 3:
             self.init(hex3: UInt16(hexValue))
@@ -107,8 +100,10 @@ extension UIColor {
             self.init(hex4: UInt16(hexValue))
         case 6:
             self.init(hex6: hexValue)
-        default:
+        case 8:
             self.init(hex8: hexValue)
+        default:
+            throw UIColorInputError.MismatchedHexStringLength
         }
     }
     
