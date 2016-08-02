@@ -13,7 +13,7 @@ import UIKit
  UnableToScanHexValue:      "Scan hex error"
  MismatchedHexStringLength: "Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8"
  */
-public enum UIColorInputError : ErrorProtocol {
+public enum UIColorInputError : Error {
     case missingHashMarkAsPrefix,
     unableToScanHexValue,
     mismatchedHexStringLength
@@ -88,8 +88,8 @@ extension UIColor {
         }
         
         guard let hexString: String = rgba.substring(from: rgba.characters.index(rgba.startIndex, offsetBy: 1)),
-            var   hexValue:  UInt32 = 0
-            where Scanner(string: hexString).scanHexInt32(&hexValue) else {
+            var   hexValue:  UInt32 = 0,
+                  Scanner(string: hexString).scanHexInt32(&hexValue) else {
                 throw UIColorInputError.unableToScanHexValue
         }
         
@@ -112,7 +112,7 @@ extension UIColor {
      
      - parameter rgba: String value.
      */
-    public convenience init(rgba: String, defaultColor: UIColor = UIColor.clear()) {
+    public convenience init(rgba: String, defaultColor: UIColor = UIColor.clear) {
         guard let color = try? UIColor(rgba_throws: rgba) else {
             self.init(cgColor: defaultColor.cgColor)
             return
