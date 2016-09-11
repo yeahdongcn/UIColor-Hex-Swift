@@ -231,11 +231,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorMissingHashMarkAsPrefix() {
         do {
             let _ = try UIColor(rgba_throws: "FFFFFFFF")
-        } catch UIColorInputError.MissingHashMarkAsPrefix {
+        } catch UIColorInputError.missingHashMarkAsPrefix {
             XCTAssertTrue(true)
-        } catch UIColorInputError.UnableToScanHexValue {
+        } catch UIColorInputError.unableToScanHexValue {
             XCTAssertTrue(false)
-        } catch UIColorInputError.MismatchedHexStringLength {
+        } catch UIColorInputError.mismatchedHexStringLength {
             XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(false)
@@ -245,11 +245,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorMismatchedHexStringLength() {
         do {
             let _ = try UIColor(rgba_throws: "#FFFFFFF")
-        } catch UIColorInputError.MissingHashMarkAsPrefix {
+        } catch UIColorInputError.missingHashMarkAsPrefix {
             XCTAssertTrue(false)
-        } catch UIColorInputError.UnableToScanHexValue {
+        } catch UIColorInputError.unableToScanHexValue {
             XCTAssertTrue(false)
-        } catch UIColorInputError.MismatchedHexStringLength {
+        } catch UIColorInputError.mismatchedHexStringLength {
             XCTAssertTrue(true)
         } catch {
             XCTAssertTrue(false)
@@ -259,11 +259,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorUnableToScanHexValue() {
         do {
             let _ = try UIColor(rgba_throws: "#ONMPQRST")
-        } catch UIColorInputError.MissingHashMarkAsPrefix {
+        } catch UIColorInputError.missingHashMarkAsPrefix {
             XCTAssertTrue(false)
-        } catch UIColorInputError.UnableToScanHexValue {
+        } catch UIColorInputError.unableToScanHexValue {
             XCTAssertTrue(true)
-        } catch UIColorInputError.MismatchedHexStringLength {
+        } catch UIColorInputError.mismatchedHexStringLength {
             XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(false)
@@ -274,11 +274,11 @@ class HEXColorTests: XCTestCase {
     
     func testStringDefaultColor() {
         var color = UIColor(rgba: "FFFFFFFF")
-        XCTAssertEqual(color, UIColor.clearColor())
+        XCTAssertEqual(color, UIColor.clear)
         color = UIColor(rgba: "#FFFFFFF")
-        XCTAssertEqual(color, UIColor.clearColor())
+        XCTAssertEqual(color, UIColor.clear)
         color = UIColor(rgba: "#ONMPQRST")
-        XCTAssertEqual(color, UIColor.clearColor())
+        XCTAssertEqual(color, UIColor.clear)
     }
     
     // MARK: - Hex string output
@@ -288,7 +288,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual("#224466", color.hexString(false))
         XCTAssertEqual("#22446688", color.hexString(true))
         
-        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellowColor());
+        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellow);
         XCTAssertEqual("#AABBCC", hexColor.hexString(false))
         XCTAssertEqual("#AABBCCDD", hexColor.hexString(true))
     }
@@ -300,7 +300,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual("#22446688", color.description)
         XCTAssertEqual("#22446688", color.debugDescription)
         
-        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellowColor());
+        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellow);
         XCTAssertEqual("#AABBCCDD", hexColor.description)
         XCTAssertEqual("#AABBCCDD", hexColor.debugDescription)
     }
@@ -308,7 +308,7 @@ class HEXColorTests: XCTestCase {
 }
 
 extension UIColor {
-    private func rgba() -> (red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
+    fileprivate func rgba() -> (red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0
@@ -318,7 +318,7 @@ extension UIColor {
     }
 }
 
-private func toUInt8(value: CGFloat) -> UInt8 {
+fileprivate func toUInt8(_ value: CGFloat) -> UInt8 {
     let multiplier = CGFloat(255)
     return UInt8(value * multiplier)
 }
