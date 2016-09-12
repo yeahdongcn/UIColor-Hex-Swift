@@ -199,6 +199,7 @@
 				TargetAttributes = {
 					43BCBCB51C51BA3D00205107 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					AA06B5051BC225210049FE14 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -306,6 +307,7 @@
 				PRODUCT_NAME = HEXColor;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -328,6 +330,7 @@
 				PRODUCT_NAME = HEXColor;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
