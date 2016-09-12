@@ -3,7 +3,7 @@
 </p>
 
 UIColor+Hex, now Swift.
-[![Build Status](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift.svg?branch=Swift-2.3)](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift)
+[![Build Status](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift.svg?branch=Swift-2.3)](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift) 
 =================
 Convenience method for creating autoreleased color using RGBA hex string.
 
