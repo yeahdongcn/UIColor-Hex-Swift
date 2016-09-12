@@ -151,9 +151,9 @@
 			productReference = 43BCBCB61C51BA3D00205107 /* HEXColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AA06B5051BC225210049FE14 /* HEXColor */ = {
+		AA06B5051BC225210049FE14 /* HEXColor-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA06B51A1BC225210049FE14 /* Build configuration list for PBXNativeTarget "HEXColor" */;
+			buildConfigurationList = AA06B51A1BC225210049FE14 /* Build configuration list for PBXNativeTarget "HEXColor-iOS" */;
 			buildPhases = (
 				AA06B5011BC225210049FE14 /* Sources */,
 				AA06B5021BC225210049FE14 /* Frameworks */,
@@ -164,7 +164,7 @@
 			);
 			dependencies = (
 			);
-			name = HEXColor;
+			name = "HEXColor-iOS";
 			productName = HEXColor;
 			productReference = AA06B5061BC225210049FE14 /* HEXColor.framework */;
 			productType = "com.apple.product-type.framework";
@@ -223,7 +223,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA06B5051BC225210049FE14 /* HEXColor */,
+				AA06B5051BC225210049FE14 /* HEXColor-iOS */,
 				43BCBCB51C51BA3D00205107 /* HEXColor-watchOS */,
 				AA06B50F1BC225210049FE14 /* HEXColorTests */,
 			);
@@ -284,7 +284,7 @@
 /* Begin PBXTargetDependency section */
 		AA06B5131BC225210049FE14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AA06B5051BC225210049FE14 /* HEXColor */;
+			target = AA06B5051BC225210049FE14 /* HEXColor-iOS */;
 			targetProxy = AA06B5121BC225210049FE14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA06B51A1BC225210049FE14 /* Build configuration list for PBXNativeTarget "HEXColor" */ = {
+		AA06B51A1BC225210049FE14 /* Build configuration list for PBXNativeTarget "HEXColor-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA06B51B1BC225210049FE14 /* Debug */,
