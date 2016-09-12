@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA06B5051BC225210049FE14"
                BuildableName = "HEXColor.framework"
-               BlueprintName = "HEXColor"
+               BlueprintName = "HEXColor-iOS"
                ReferencedContainer = "container:HEXColor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA06B5051BC225210049FE14"
             BuildableName = "HEXColor.framework"
-            BlueprintName = "HEXColor"
+            BlueprintName = "HEXColor-iOS"
             ReferencedContainer = "container:HEXColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA06B5051BC225210049FE14"
             BuildableName = "HEXColor.framework"
-            BlueprintName = "HEXColor"
+            BlueprintName = "HEXColor-iOS"
             ReferencedContainer = "container:HEXColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,7 +85,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA06B5051BC225210049FE14"
             BuildableName = "HEXColor.framework"
-            BlueprintName = "HEXColor"
+            BlueprintName = "HEXColor-iOS"
             ReferencedContainer = "container:HEXColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
