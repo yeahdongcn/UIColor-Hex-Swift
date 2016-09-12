@@ -88,8 +88,9 @@ extension UIColor {
         }
         
         let hexString: String = rgba.substring(from: rgba.characters.index(rgba.startIndex, offsetBy: 1))
-        guard
-            var hexValue:  UInt32 = 0, Scanner(string: hexString).scanHexInt32(&hexValue) else {
+        var hexValue:  UInt32 = 0
+        
+        guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
                 throw UIColorInputError.unableToScanHexValue
         }
         
