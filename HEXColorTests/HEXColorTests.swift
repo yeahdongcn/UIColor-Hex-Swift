@@ -292,22 +292,14 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual("#AABBCC", hexColor.hexString(false))
         XCTAssertEqual("#AABBCCDD", hexColor.hexString(true))
     }
-    
-    // MARK: - Desc
-    
-    func testDesc() {
-        let color = UIColor(red: CGFloat(0x22 / 255.0), green: CGFloat(0x44 / 255.0), blue: CGFloat(0x66 / 255.0), alpha: CGFloat(0x88 / 255.0))
-//        XCTAssertEqual("#22446688", color.description)
-        XCTAssertEqual("#22446688", color.debugDescription)
-        
-        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellow);
-//        XCTAssertEqual("#AABBCCDD", hexColor.description)
-        XCTAssertEqual("#AABBCCDD", hexColor.debugDescription)
-    }
-    
 }
 
 extension UIColor {
+    fileprivate func toUInt8(_ value: CGFloat) -> UInt8 {
+        let multiplier = CGFloat(255)
+        return UInt8(value * multiplier)
+    }
+    
     fileprivate func rgba() -> (red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -316,9 +308,4 @@ extension UIColor {
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         return (toUInt8(red), toUInt8(green), toUInt8(blue), toUInt8(alpha))
     }
-}
-
-fileprivate func toUInt8(_ value: CGFloat) -> UInt8 {
-    let multiplier = CGFloat(255)
-    return UInt8(value * multiplier)
 }
