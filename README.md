@@ -7,15 +7,15 @@ UIColor+Hex, now Swift.
 =================
 Convenience method for creating autoreleased color using RGBA hex string.
 
-    var strokeColor = UIColor("#ffcc00").CGColor // Solid color
+    var strokeColor = UIColor("#FFCC00").CGColor // Solid color
     
-    var fillColor = UIColor("#ffcc00dd").CGColor // Color with alpha
+    var fillColor = UIColor("#FFCC00DD").CGColor // Color with alpha
 
     var backgroundColor = UIColor("#FFF") // Supports shorthand 3 character representation
 
     var menuTextColor = UIColor("#013E") // Supports shorthand 4 character representation (with alpha)
 
-    var hexString = UIColor.redColor().hexString(false) // "#FF0000"
+    var hexString = UIColor.redColor().hexString() // "#FF0000FF"
 
 ##Installation
 
@@ -26,7 +26,7 @@ Simply add the following lines to your `Podfile`:
 # required by CocoaPods 0.36.0.rc.1 for Swift Pods
 use_frameworks! 
 
-pod 'UIColor_Hex_Swift', '~> 3.0'
+pod 'UIColor_Hex_Swift', '~> 3.0.1'
 ```
 
 Then import it where you use it:
@@ -41,7 +41,7 @@ import UIColor_Hex_Swift
 Simply add the following line to your `Cartfile`:
 
 ```ruby
-github "yeahdongcn/UIColor-Hex-Swift" >= 3.0
+github "yeahdongcn/UIColor-Hex-Swift" >= 3.0.1
 ```
 =================
 See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
