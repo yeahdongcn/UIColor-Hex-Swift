@@ -113,7 +113,7 @@ extension UIColor {
      
      - parameter rgba: String value.
      */
-    public convenience init(rgba: String, defaultColor: UIColor = UIColor.clear) {
+    public convenience init(_ rgba: String, defaultColor: UIColor = UIColor.clear) {
         guard let color = try? UIColor(rgba_throws: rgba) else {
             self.init(cgColor: defaultColor.cgColor)
             return

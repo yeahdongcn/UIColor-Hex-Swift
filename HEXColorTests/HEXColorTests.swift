@@ -273,11 +273,11 @@ class HEXColorTests: XCTestCase {
     // MARK: - String (With default color)
     
     func testStringDefaultColor() {
-        var color = UIColor(rgba: "FFFFFFFF")
+        var color = UIColor("FFFFFFFF")
         XCTAssertEqual(color, UIColor.clear)
-        color = UIColor(rgba: "#FFFFFFF")
+        color = UIColor("#FFFFFFF")
         XCTAssertEqual(color, UIColor.clear)
-        color = UIColor(rgba: "#ONMPQRST")
+        color = UIColor("#ONMPQRST")
         XCTAssertEqual(color, UIColor.clear)
     }
     
@@ -288,7 +288,7 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual("#224466", color.hexString(false))
         XCTAssertEqual("#22446688", color.hexString(true))
         
-        let hexColor = UIColor(rgba: "#AABBCCDD", defaultColor: UIColor.yellow);
+        let hexColor = UIColor("#AABBCCDD", defaultColor: UIColor.yellow);
         XCTAssertEqual("#AABBCC", hexColor.hexString(false))
         XCTAssertEqual("#AABBCCDD", hexColor.hexString(true))
     }
