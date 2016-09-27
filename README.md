@@ -5,6 +5,9 @@
 UIColor+Hex, now Swift.
 [![Build Status](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift.svg?branch=master)](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift) 
 =================
+![](https://img.shields.io/badge/Swift-3.0-blue.svg?style=flat)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 Convenience method for creating autoreleased color using RGBA hex string.
 
     var strokeColor = UIColor("#FFCC00").CGColor // Solid color
