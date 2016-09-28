@@ -91,7 +91,7 @@ extension UIColor {
         var hexValue:  UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
-                throw UIColorInputError.unableToScanHexValue
+            throw UIColorInputError.unableToScanHexValue
         }
         
         switch (hexString.characters.count) {
@@ -137,6 +137,31 @@ extension UIColor {
             return String(format: "#%02X%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255), Int(a * 255))
         } else {
             return String(format: "#%02X%02X%02X", Int(r * 255), Int(g * 255), Int(b * 255))
+        }
+    }
+}
+
+extension String {
+    /**
+     Convert argb string to rgba string.
+     */
+    public func argb2rgba() -> String? {
+        guard self.hasPrefix("#") else {
+            return nil
+        }
+        
+        let hexString: String = self.substring(from: self.characters.index(self.startIndex, offsetBy: 1))
+        switch (hexString.characters.count) {
+        case 4:
+            return "#"
+                + hexString.substring(from: self.characters.index(self.startIndex, offsetBy: 1))
+                + hexString.substring(to: self.characters.index(self.startIndex, offsetBy: 1))
+        case 8:
+            return "#"
+                + hexString.substring(from: self.characters.index(self.startIndex, offsetBy: 2))
+                + hexString.substring(to: self.characters.index(self.startIndex, offsetBy: 2))
+        default:
+            return nil
         }
     }
 }

@@ -292,6 +292,16 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual("#AABBCC", hexColor.hexString(false))
         XCTAssertEqual("#AABBCCDD", hexColor.hexString(true))
     }
+    
+    // MARK: - Convert argb string to rgba string
+    
+    func testArgb2rgba() {
+        let rgba = "#2468".argb2rgba()
+        XCTAssertEqual("#4682", rgba)
+        
+        let rrggbbaa = "#22446688".argb2rgba()
+        XCTAssertEqual("#44668822", rrggbbaa)
+    }
 }
 
 extension UIColor {
