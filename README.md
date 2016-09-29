@@ -4,7 +4,7 @@
 
 UIColor+Hex, now Swift.
 
-[![Build Status](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift.svg?branch=master)](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift)[![codecov.io](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master/graphs/badge.svg)](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master)
+[![Build Status](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift.svg?branch=master)](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift) [![codecov.io](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master/graphs/badge.svg)](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master)
 =================
 ![](https://img.shields.io/badge/Swift-3.0-blue.svg?style=flat)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
