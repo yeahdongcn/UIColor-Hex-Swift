@@ -296,11 +296,17 @@ class HEXColorTests: XCTestCase {
     // MARK: - Convert argb string to rgba string
     
     func testArgb2rgba() {
-        let rgba = "#2468".argb2rgba()
-        XCTAssertEqual("#4682", rgba)
+        if let rgba = "#2468".argb2rgba() {
+            XCTAssertEqual("#4682", rgba)
+            let color = UIColor(rgba)
+            XCTAssertEqual(color, UIColor("#4682"))
+        }
         
-        let rrggbbaa = "#22446688".argb2rgba()
-        XCTAssertEqual("#44668822", rrggbbaa)
+        if let rrggbbaa = "#22446688".argb2rgba() {
+            XCTAssertEqual("#44668822", rrggbbaa)
+            let color = UIColor(rrggbbaa)
+            XCTAssertEqual(color, UIColor("#44668822"))
+        }
     }
 }
 

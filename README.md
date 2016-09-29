@@ -10,15 +10,30 @@ UIColor+Hex, now Swift.
 
 Convenience method for creating autoreleased color using RGBA hex string.
 
-    var strokeColor = UIColor("#FFCC00").CGColor // Solid color
+    // Solid color
+    let strokeColor = UIColor("#FFCC00").CGColor 
     
-    var fillColor = UIColor("#FFCC00DD").CGColor // Color with alpha
+    // Color with alpha
+    let fillColor = UIColor("#FFCC00DD").CGColor 
 
-    var backgroundColor = UIColor("#FFF") // Supports shorthand 3 character representation
+    // Supports shorthand 3 character representation
+    let backgroundColor = UIColor("#FFF") 
 
-    var menuTextColor = UIColor("#013E") // Supports shorthand 4 character representation (with alpha)
+    // Supports shorthand 4 character representation (with alpha)
+    let menuTextColor = UIColor("#013E") 
 
-    var hexString = UIColor.redColor().hexString() // "#FF0000FF"
+    // "#FF0000FF"
+    let hexString = UIColor.redColor().hexString()
+
+    // Convert shorthand 4 character representation (with alpha) from argb to rgba
+    if let rgba = "#AFFF".argb2rgba() {            
+        let androidBackgroundColor = UIColor(rgba)
+    }
+
+    // Convert 8 character representation (with alpha) from argb to rgba
+    if let rgba = "#AAFFFFFF".argb2rgba() {        
+        let androidFrontColor = UIColor(rgba)
+    }
 
 ##Installation
 
