@@ -3,3 +3,6 @@ language: objective-c
 osx_image: xcode8
 
 script: 'sh Scripts/ci.sh'
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
