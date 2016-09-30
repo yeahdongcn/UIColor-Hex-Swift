@@ -302,7 +302,7 @@ class HEXColorTests: XCTestCase {
         if let _ = "22446688".argb2rgba() {} else  {
             XCTAssertTrue(true)
         }
-        if let _ = "468".argb2rgba() {} else  {
+        if let _ = "#468".argb2rgba() {} else  {
             XCTAssertTrue(true)
         }
         if let rgba = "#2468".argb2rgba() {
