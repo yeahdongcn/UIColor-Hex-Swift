@@ -7,6 +7,7 @@ UIColor+Hex, now Swift.
 =================
 Convenience method for creating autoreleased color using RGBA hex string.
 
+```swift
     // Solid color
     let strokeColor = UIColor("#FFCC00").CGColor 
     
@@ -31,10 +32,11 @@ Convenience method for creating autoreleased color using RGBA hex string.
     if let rgba = "#AAFFFFFF".argb2rgba() {        
         let androidFrontColor = UIColor(rgba)
     }
+```
 
-##Installation
+## Installation
 
-###[CocoaPods](http://cocoapods.org)
+### [CocoaPods](http://cocoapods.org)
 
 Simply add the following lines to your `Podfile`:
 ```ruby
@@ -51,12 +53,14 @@ import UIColor_Hex_Swift
 
 *(CocoaPods v0.36 or later required. See [this blog post](http://blog.cocoapods.org/Pod-Authors-Guide-to-CocoaPods-Frameworks/) for details.)*
 
-###[Carthage](http://github.com/Carthage/Carthage)
+### [Carthage](http://github.com/Carthage/Carthage)
 
 Simply add the following line to your `Cartfile`:
 
 ```ruby
 github "yeahdongcn/UIColor-Hex-Swift" >= 3.0.2
 ```
-=================
+
+---
+
 See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
