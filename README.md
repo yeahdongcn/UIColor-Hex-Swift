@@ -47,7 +47,7 @@ pod 'UIColor_Hex_Swift', '~> 3.0.2'
 ```
 
 Then import it where you use it:
-```
+```swift
 import UIColor_Hex_Swift
 ```
 
