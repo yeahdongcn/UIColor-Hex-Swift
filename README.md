@@ -47,7 +47,7 @@ pod 'UIColor_Hex_Swift', '~> 3.0.2'
 ```
 
 Then import it where you use it:
-```
+```swift
 import UIColor_Hex_Swift
 ```
 
@@ -59,6 +59,13 @@ Simply add the following line to your `Cartfile`:
 
 ```ruby
 github "yeahdongcn/UIColor-Hex-Swift" >= 3.0.2
+```
+
+Then add the HexColor.framework to your frameworks list in the Xcode project.
+
+Then import it where you use it:
+```swift
+import HEXColor
 ```
 
 ---
