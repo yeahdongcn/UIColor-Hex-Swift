@@ -61,7 +61,7 @@ Simply add the following line to your `Cartfile`:
 github "yeahdongcn/UIColor-Hex-Swift" >= 3.0.2
 ```
 
-Then add the HexColor.framework to your frameworks.
+Then add the HexColor.framework to your frameworks list in the Xcode project.
 
 Then import it where you use it:
 ```swift
