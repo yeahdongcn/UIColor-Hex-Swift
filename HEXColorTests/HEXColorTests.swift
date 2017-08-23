@@ -317,6 +317,32 @@ class HEXColorTests: XCTestCase {
             XCTAssertEqual(color, UIColor("#44668822"))
         }
     }
+    
+    // MARK: - Hex string output for wide display colors
+    
+    func testWideDisplayColors() {
+        let colors = [UIColor(red: 0.1, green: -0.1, blue: 0.1, alpha: 1),
+                      UIColor(red: -0.1, green: 0.1, blue: 0.1, alpha: 1),
+                      UIColor(red: 0.1, green: 0.1, blue: -0.1, alpha: 1)]
+        for color in colors {
+            XCTAssertEqual("", color.hexString(false))
+            XCTAssertEqual("", color.hexString(true))
+            do {
+                let _ = try color.hexStringThrows(true)
+            } catch UIColorInputError.unableToOutputHexStringForWideDisplayColor {
+                XCTAssertTrue(true)
+            } catch {
+                XCTAssertTrue(false)
+            }
+            do {
+                let _ = try color.hexStringThrows(false)
+            } catch UIColorInputError.unableToOutputHexStringForWideDisplayColor {
+                XCTAssertTrue(true)
+            } catch {
+                XCTAssertTrue(false)
+            }
+        }
+    }
 }
 
 extension UIColor {
