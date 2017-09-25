@@ -88,7 +88,7 @@ extension UIColor {
             throw UIColorInputError.missingHashMarkAsPrefix
         }
         
-        let hexString: String = rgba.substring(from: rgba.characters.index(rgba.startIndex, offsetBy: 1))
+        let hexString: String = String(rgba[String.Index.init(encodedOffset: 1)...])
         var hexValue:  UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
@@ -167,16 +167,16 @@ extension String {
             return nil
         }
         
-        let hexString: String = self.substring(from: self.characters.index(self.startIndex, offsetBy: 1))
+        let hexString: String = String(self[self.characters.index(self.startIndex, offsetBy: 1)...])
         switch (hexString.characters.count) {
         case 4:
             return "#"
-                + hexString.substring(from: self.characters.index(self.startIndex, offsetBy: 1))
-                + hexString.substring(to: self.characters.index(self.startIndex, offsetBy: 1))
+                + String(hexString[self.characters.index(self.startIndex, offsetBy: 1)...])
+                + String(hexString[...self.characters.index(self.startIndex, offsetBy: 1)])
         case 8:
             return "#"
-                + hexString.substring(from: self.characters.index(self.startIndex, offsetBy: 2))
-                + hexString.substring(to: self.characters.index(self.startIndex, offsetBy: 2))
+                + String(hexString[self.characters.index(self.startIndex, offsetBy: 2)...])
+                + String(hexString[...self.characters.index(self.startIndex, offsetBy: 2)])
         default:
             return nil
         }
