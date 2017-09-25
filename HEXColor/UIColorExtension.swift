@@ -172,11 +172,11 @@ extension String {
         case 4:
             return "#"
                 + String(hexString[self.characters.index(self.startIndex, offsetBy: 1)...])
-                + String(hexString[...self.characters.index(self.startIndex, offsetBy: 1)])
+                + String(hexString[..<self.characters.index(self.startIndex, offsetBy: 1)])
         case 8:
             return "#"
                 + String(hexString[self.characters.index(self.startIndex, offsetBy: 2)...])
-                + String(hexString[...self.characters.index(self.startIndex, offsetBy: 2)])
+                + String(hexString[..<self.characters.index(self.startIndex, offsetBy: 2)])
         default:
             return nil
         }
