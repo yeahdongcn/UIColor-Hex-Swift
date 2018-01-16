@@ -20,7 +20,7 @@ public enum UIColorInputError : Error {
     unableToOutputHexStringForWideDisplayColor
 }
 
-extension UIColor {
+@objc extension UIColor {
     /**
      The shorthand three-digit hexadecimal representation of color.
      #RGB defines to the color #RRGGBB.

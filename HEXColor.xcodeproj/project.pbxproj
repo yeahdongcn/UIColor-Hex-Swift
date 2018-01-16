@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43BCBCC11C51BAFE00205107 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43BCBCC21C51BB0100205107 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5221BC233F80049FE14 /* UIColorExtension.swift */; };
+		56FC6F9E200DF8A400F87A72 /* OCHexColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FC6F9D200DF8A400F87A72 /* OCHexColorTests.m */; };
 		AA06B50A1BC225210049FE14 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; };
 		AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5151BC225210049FE14 /* HEXColorTests.swift */; };
@@ -29,6 +30,8 @@
 		43BCBCB61C51BA3D00205107 /* HEXColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HEXColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BCBCBA1C51BA3D00205107 /* watchOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "watchOS-Info.plist"; sourceTree = "<group>"; };
 		43BCBCBF1C51BAA800205107 /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
+		56FC6F9C200DF8A400F87A72 /* HEXColorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HEXColorTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		56FC6F9D200DF8A400F87A72 /* OCHexColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHexColorTests.m; sourceTree = "<group>"; };
 		AA06B5061BC225210049FE14 /* HEXColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HEXColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA06B5091BC225210049FE14 /* HEXColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HEXColor.h; sourceTree = "<group>"; };
 		AA06B5101BC225210049FE14 /* HEXColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HEXColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				AA06B5151BC225210049FE14 /* HEXColorTests.swift */,
+				56FC6F9D200DF8A400F87A72 /* OCHexColorTests.m */,
 				AA06B5171BC225210049FE14 /* Info.plist */,
+				56FC6F9C200DF8A400F87A72 /* HEXColorTests-Bridging-Header.h */,
 			);
 			path = HEXColorTests;
 			sourceTree = "<group>";
@@ -207,7 +212,7 @@
 					};
 					AA06B50F1BC225210049FE14 = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0920;
 					};
 				};
 			};
@@ -276,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */,
+				56FC6F9E200DF8A400F87A72 /* OCHexColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,10 +500,13 @@
 		AA06B51E1BC225210049FE14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HEXColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HEXColorTests/HEXColorTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -506,10 +515,12 @@
 		AA06B51F1BC225210049FE14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HEXColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HEXColorTests/HEXColorTests-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
