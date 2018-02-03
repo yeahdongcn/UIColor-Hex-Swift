@@ -12,6 +12,8 @@
 		56FC6F9E200DF8A400F87A72 /* OCHexColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FC6F9D200DF8A400F87A72 /* OCHexColorTests.m */; };
 		6534822E202463B00032A09E /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822D202463B00032A09E /* UIColorInputError.swift */; };
 		65348230202464370032A09E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
+		7045417C2025CBFD00A1D3D8 /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822D202463B00032A09E /* UIColorInputError.swift */; };
+		7045417E2025CC0000A1D3D8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
 		AA06B50A1BC225210049FE14 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; };
 		AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5151BC225210049FE14 /* HEXColorTests.swift */; };
@@ -271,6 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43BCBCC21C51BB0100205107 /* UIColorExtension.swift in Sources */,
+				7045417C2025CBFD00A1D3D8 /* UIColorInputError.swift in Sources */,
+				7045417E2025CC0000A1D3D8 /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
