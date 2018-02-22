@@ -8,17 +8,6 @@
 
 import UIKit
 
-/**
- MissingHashMarkAsPrefix:   "Invalid RGB string, missing '#' as prefix"
- UnableToScanHexValue:      "Scan hex error"
- MismatchedHexStringLength: "Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8"
- */
-public enum UIColorInputError : Error {
-    case missingHashMarkAsPrefix,
-    unableToScanHexValue,
-    mismatchedHexStringLength,
-    unableToOutputHexStringForWideDisplayColor
-}
 
 @objc extension UIColor {
     /**
@@ -85,14 +74,14 @@ public enum UIColorInputError : Error {
      */
     public convenience init(rgba_throws rgba: String) throws {
         guard rgba.hasPrefix("#") else {
-            throw UIColorInputError.missingHashMarkAsPrefix
+            throw UIColorInputError.missingHashMarkAsPrefix(rgba)
         }
         
         let hexString: String = String(rgba[String.Index.init(encodedOffset: 1)...])
         var hexValue:  UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
-            throw UIColorInputError.unableToScanHexValue
+            throw UIColorInputError.unableToScanHexValue(rgba)
         }
         
         switch (hexString.count) {
@@ -105,7 +94,7 @@ public enum UIColorInputError : Error {
         case 8:
             self.init(hex8: hexValue)
         default:
-            throw UIColorInputError.mismatchedHexStringLength
+            throw UIColorInputError.mismatchedHexStringLength(rgba)
         }
     }
     
@@ -155,26 +144,5 @@ public enum UIColorInputError : Error {
             return ""
         }
         return hexString
-    }
-}
-
-extension String {
-    /**
-     Convert argb string to rgba string.
-     */
-    public func argb2rgba() -> String? {
-        guard self.hasPrefix("#") else {
-            return nil
-        }
-        
-        let hexString: String = String(self[self.index(self.startIndex, offsetBy: 1)...])
-        switch hexString.count {
-        case 4:
-          return "#\(String(hexString[self.index(self.startIndex, offsetBy: 1)...]))\(String(hexString[..<self.index(self.startIndex, offsetBy: 1)]))"
-        case 8:
-          return "#\(String(hexString[self.index(self.startIndex, offsetBy: 2)...]))\(String(hexString[..<self.index(self.startIndex, offsetBy: 2)]))"
-        default:
-          return nil
-        }
     }
 }
