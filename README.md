@@ -21,15 +21,18 @@ Convenience method for creating autoreleased color using RGBA hex string.
     let menuTextColor = UIColor("#013E") 
 
     // "#FF0000FF"
-    let hexString = UIColor.redColor().hexString()
+    let hexString = UIColor.red.hexString()
+
+    // Support for a hex string without the hashtag header
+    let red = UIColor("FF0000")
 
     // Convert shorthand 4 character representation (with alpha) from argb to rgba
-    if let rgba = "#AFFF".argb2rgba() {            
+    if let rgba = "#AFFF".argb2rgba {
         let androidBackgroundColor = UIColor(rgba)
     }
 
-    // Convert 8 character representation (with alpha) from argb to rgba
-    if let rgba = "#AAFFFFFF".argb2rgba() {        
+    // Convert 8 character representation (with alpha) from argb to rgba.
+    if let rgba = "#AAFFFFFF".argb2rgba {
         let androidFrontColor = UIColor(rgba)
     }
 ```

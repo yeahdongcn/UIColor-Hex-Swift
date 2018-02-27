@@ -31,12 +31,12 @@ class HEXColorTests: XCTestCase {
     
     // MARK: - Three-digit
     func testThreeDigitMin() {
-        let (red, green, blue, alpha) = UIColor(hex3: 0x000).rgba()
+        let (red, green, blue, alpha) = UIColor(hex3: 0x000).rgba
         XCTAssertEqual(red, 0)
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#000").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -47,12 +47,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testThreeDigitStep() {
-        let (red, green, blue, alpha) = UIColor(hex3: 0x123, alpha: 0.5).rgba()
+        let (red, green, blue, alpha) = UIColor(hex3: 0x123, alpha: 0.5).rgba
         XCTAssertEqual(red, 0x11)
         XCTAssertEqual(green, 0x22)
         XCTAssertEqual(blue, 0x33)
         XCTAssertEqual(alpha, 0xFF / 2)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#123").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#123").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -63,12 +63,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testThreeDigitMax() {
-        let (red, green, blue, alpha) = UIColor(hex3: 0xFFF).rgba()
+        let (red, green, blue, alpha) = UIColor(hex3: 0xFFF).rgba
         XCTAssertEqual(red, 0xFF)
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFF").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -80,12 +80,12 @@ class HEXColorTests: XCTestCase {
     
     // MARK: - Four-digit
     func testFourDigitMin() {
-        let (red, green, blue, alpha) = UIColor(hex4: 0x0000).rgba()
+        let (red, green, blue, alpha) = UIColor(hex4: 0x0000).rgba
         XCTAssertEqual(red, 0)
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#0000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#0000").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -96,12 +96,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testFourDigitStep() {
-        let (red, green, blue, alpha) = UIColor(hex4: 0x1234).rgba()
+        let (red, green, blue, alpha) = UIColor(hex4: 0x1234).rgba
         XCTAssertEqual(red, 0x11)
         XCTAssertEqual(green, 0x22)
         XCTAssertEqual(blue, 0x33)
         XCTAssertEqual(alpha, 0x44)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#1234").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#1234").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -112,12 +112,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testFourDigitMax() {
-        let (red, green, blue, alpha) = UIColor(hex4: 0xFFFF).rgba()
+        let (red, green, blue, alpha) = UIColor(hex4: 0xFFFF).rgba
         XCTAssertEqual(red, 0xFF)
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFF").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -130,12 +130,12 @@ class HEXColorTests: XCTestCase {
     
     // MARK: - Six-digit
     func testSixDigitMin() {
-        let (red, green, blue, alpha) = UIColor(hex6: 0x000000).rgba()
+        let (red, green, blue, alpha) = UIColor(hex6: 0x000000).rgba
         XCTAssertEqual(red, 0)
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#000000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#000000").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -146,12 +146,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testSixDigitStep() {
-        let (red, green, blue, alpha) = UIColor(hex6: 0x123456, alpha: 0.5).rgba()
+        let (red, green, blue, alpha) = UIColor(hex6: 0x123456, alpha: 0.5).rgba
         XCTAssertEqual(red, 0x12)
         XCTAssertEqual(green, 0x34)
         XCTAssertEqual(blue, 0x56)
         XCTAssertEqual(alpha, 0xFF / 2)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#123456").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#123456").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -162,12 +162,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testSixDigitMax() {
-        let (red, green, blue, alpha) = UIColor(hex6: 0xFFFFFF).rgba()
+        let (red, green, blue, alpha) = UIColor(hex6: 0xFFFFFF).rgba
         XCTAssertEqual(red, 0xFF)
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFFFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFFFF").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -179,12 +179,12 @@ class HEXColorTests: XCTestCase {
     
     // MARK: - Eight-digit
     func testEightDigitMin() {
-        let (red, green, blue, alpha) = UIColor(hex8: 0x00000000).rgba()
+        let (red, green, blue, alpha) = UIColor(hex8: 0x00000000).rgba
         XCTAssertEqual(red, 0)
         XCTAssertEqual(green, 0)
         XCTAssertEqual(blue, 0)
         XCTAssertEqual(alpha, 0)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#00000000").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#00000000").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -195,12 +195,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testEightDigitStep() {
-        let (red, green, blue, alpha) = UIColor(hex8: 0x12345678).rgba()
+        let (red, green, blue, alpha) = UIColor(hex8: 0x12345678).rgba
         XCTAssertEqual(red, 0x12)
         XCTAssertEqual(green, 0x34)
         XCTAssertEqual(blue, 0x56)
         XCTAssertEqual(alpha, 0x78)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#12345678").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#12345678").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -211,12 +211,12 @@ class HEXColorTests: XCTestCase {
     }
     
     func testEightDigitMax() {
-        let (red, green, blue, alpha) = UIColor(hex6: 0xFFFFFFFF).rgba()
+        let (red, green, blue, alpha) = UIColor(hex6: 0xFFFFFFFF).rgba
         XCTAssertEqual(red, 0xFF)
         XCTAssertEqual(green, 0xFF)
         XCTAssertEqual(blue, 0xFF)
         XCTAssertEqual(alpha, 0xFF)
-        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFFFFFF").rgba() else {
+        guard let (r, g, b, a) = try? UIColor(rgba_throws: "#FFFFFFFF").rgba else {
             XCTAssertTrue(false)
             return
         }
@@ -228,52 +228,37 @@ class HEXColorTests: XCTestCase {
     
     // MARK: - String (With error)
     
-    func testStringInputErrorMissingHashMarkAsPrefix() {
-        do {
-            let _ = try UIColor(rgba_throws: "FFFFFFFF")
-        } catch UIColorInputError.missingHashMarkAsPrefix {
-            XCTAssertTrue(true)
-        } catch UIColorInputError.unableToScanHexValue {
-            XCTAssertTrue(false)
-        } catch UIColorInputError.mismatchedHexStringLength {
-            XCTAssertTrue(false)
-        } catch {
-            XCTAssertTrue(false)
-        }
-    }
-    
     func testStringInputErrorMismatchedHexStringLength() {
         do {
             let _ = try UIColor(rgba_throws: "#FFFFFFF")
-        } catch UIColorInputError.missingHashMarkAsPrefix {
-            XCTAssertTrue(false)
-        } catch UIColorInputError.unableToScanHexValue {
-            XCTAssertTrue(false)
-        } catch UIColorInputError.mismatchedHexStringLength {
-            XCTAssertTrue(true)
         } catch {
-            XCTAssertTrue(false)
+            error.handling()
         }
     }
     
     func testStringInputErrorUnableToScanHexValue() {
         do {
             let _ = try UIColor(rgba_throws: "#ONMPQRST")
-        } catch UIColorInputError.missingHashMarkAsPrefix {
-            XCTAssertTrue(false)
-        } catch UIColorInputError.unableToScanHexValue {
-            XCTAssertTrue(true)
-        } catch UIColorInputError.mismatchedHexStringLength {
-            XCTAssertTrue(false)
+            
         } catch {
-            XCTAssertTrue(false)
+            error.handling()
         }
     }
+    
+    func testStringInputWithoutHashtag() {
+        do {
+            let color = try UIColor(rgba_throws: "FF0000") // red
+            XCTAssertEqual(color, UIColor.red)
+        } catch {
+            error.handling()
+        }
+    }
+
     
     // MARK: - String (With default color)
     
     func testStringDefaultColor() {
-        var color = UIColor("FFFFFFFF")
+        var color = UIColor("FFFFFFF")
         XCTAssertEqual(color, UIColor.clear)
         color = UIColor("#FFFFFFF")
         XCTAssertEqual(color, UIColor.clear)
@@ -329,17 +314,14 @@ class HEXColorTests: XCTestCase {
             XCTAssertEqual("", color.hexString(true))
             do {
                 let _ = try color.hexStringThrows(true)
-            } catch UIColorInputError.unableToOutputHexStringForWideDisplayColor {
-                XCTAssertTrue(true)
             } catch {
-                XCTAssertTrue(false)
+                error.handling()
             }
+            
             do {
                 let _ = try color.hexStringThrows(false)
-            } catch UIColorInputError.unableToOutputHexStringForWideDisplayColor {
-                XCTAssertTrue(true)
             } catch {
-                XCTAssertTrue(false)
+                error.handling()
             }
         }
     }
@@ -351,12 +333,37 @@ extension UIColor {
         return UInt8(value * multiplier)
     }
     
-    fileprivate func rgba() -> (red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
+    fileprivate var rgba: (red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0
         var alpha: CGFloat = 0
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         return (toUInt8(red), toUInt8(green), toUInt8(blue), toUInt8(alpha))
+    }
+}
+
+private extension Error {
+    
+    func handling() {
+        
+        guard let error = self as? UIColorInputError else {
+            XCTFail()
+            return
+        }
+        
+        switch error {
+        case .unableToScanHexValue(let hex):
+            XCTAssertEqual(error.errorDescription,
+                           UIColorInputError.unableToScanHexValue(hex).errorDescription)
+            
+        case .mismatchedHexStringLength(let hex):
+            XCTAssertEqual(error.errorDescription,
+                           UIColorInputError.mismatchedHexStringLength(hex).errorDescription)
+            
+        case .unableToOutputHexStringForWideDisplayColor:
+            XCTAssertEqual(error.errorDescription,
+                           UIColorInputError.unableToOutputHexStringForWideDisplayColor.errorDescription)
+        }
     }
 }
