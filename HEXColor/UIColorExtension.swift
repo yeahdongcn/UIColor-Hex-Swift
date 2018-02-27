@@ -84,7 +84,9 @@ import UIKit
         var hexValue: UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
-            throw UIColorInputError.unableToScanHexValue(rgba)
+            let error = UIColorInputError.unableToScanHexValue(rgba)
+            print(error.localizedDescription)
+            throw error
         }
         
         switch (hexString.count) {
@@ -97,7 +99,9 @@ import UIKit
         case 8:
             self.init(hex8: hexValue)
         default:
-            throw UIColorInputError.mismatchedHexStringLength(rgba)
+            let error = UIColorInputError.mismatchedHexStringLength(rgba)
+            print(error.localizedDescription)
+            throw error
         }
     }
     
@@ -127,7 +131,9 @@ import UIKit
         getRed(&r, green: &g, blue: &b, alpha: &a)
         
         guard r >= 0 && r <= 1 && g >= 0 && g <= 1 && b >= 0 && b <= 1 else {
-            throw UIColorInputError.unableToOutputHexStringForWideDisplayColor
+            let error = UIColorInputError.unableToOutputHexStringForWideDisplayColor
+            print(error.localizedDescription)
+            throw error
         }
         
         if includeAlpha {
