@@ -343,6 +343,22 @@ class HEXColorTests: XCTestCase {
             }
         }
     }
+    
+    // MARK: - Hex string output for red/green/blue color
+    func testXX() {
+        do {
+            let redString = try UIColor.red.hexStringThrows(true)
+            XCTAssertEqual(redString, UIColor.red.hexString(true))
+            
+            let greenString = try UIColor.green.hexStringThrows(false)
+            XCTAssertEqual(greenString, UIColor.green.hexString(false))
+            
+            let blueString = try UIColor.blue.hexStringThrows()
+            XCTAssertEqual(blueString, UIColor.blue.hexString())
+        } catch {
+            XCTAssertTrue(false)
+        }
+    }
 }
 
 extension UIColor {
