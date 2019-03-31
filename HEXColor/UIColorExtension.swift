@@ -79,7 +79,7 @@ import UIKit
             throw error
         }
         
-        let hexString: String = String(rgba[String.Index.init(encodedOffset: 1)...])
+        let hexString: String = String(rgba[String.Index(utf16Offset: 1, in: rgba)...])
         var hexValue:  UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {

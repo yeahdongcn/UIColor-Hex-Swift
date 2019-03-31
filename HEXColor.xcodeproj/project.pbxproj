@@ -216,20 +216,21 @@
 					};
 					AA06B5051BC225210049FE14 = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 					AA06B50F1BC225210049FE14 = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = AA06B5001BC225210049FE14 /* Build configuration list for PBXProject "HEXColor" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = AA06B4FC1BC225210049FE14;
 			productRefGroup = AA06B5071BC225210049FE14 /* Products */;
@@ -485,8 +486,7 @@
 				PRODUCT_NAME = HEXColor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -508,8 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColor;
 				PRODUCT_NAME = HEXColor;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -523,8 +522,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HEXColorTests/HEXColorTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -537,8 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HEXColorTests/HEXColorTests-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
