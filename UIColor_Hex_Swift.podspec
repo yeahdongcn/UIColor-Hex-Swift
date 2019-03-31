@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.source_files = 'HEXColor/*.{h,swift}'
   s.frameworks   = ['UIKit']
   s.requires_arc = true
+  s.swift_versions = ['5.0']
 end
