@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/yeahdongcn/UIColor-Hex-Swift.git', :tag => "#{s.version}" }
   s.source_files = 'HEXColor/*.{h,swift}'
   s.ios.frameworks   = ['UIKit']
-  s.ios.frameworks   = ['Cocoa']
+  s.osx.frameworks   = ['Cocoa']
   s.requires_arc = true
   s.swift_versions = ['5.0']
 end
