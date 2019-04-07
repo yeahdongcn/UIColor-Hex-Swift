@@ -7,11 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#if (TARGET_OS_IPHONE || TARGET_OS_SIMULATOR)
-#import <UIKit/UIKit.h>
-#elif TARGET_OS_MAC
-#import <Cocoa/Cocoa.h>
-#endif
 
 //! Project version number for HEXColor.
 FOUNDATION_EXPORT double HEXColorVersionNumber;
