@@ -3,7 +3,7 @@
 </p>
 
 UIColor+Hex, now Swift.
-[![Build Status](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift.svg?branch=master)](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift) [![codecov.io](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master/graphs/badge.svg)](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master) ![](https://img.shields.io/badge/Swift-4.0-blue.svg?style=flat) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
+[![Build Status](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift.svg?branch=master)](https://travis-ci.org/yeahdongcn/UIColor-Hex-Swift) [![codecov.io](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master/graphs/badge.svg)](https://codecov.io/gh/yeahdongcn/UIColor-Hex-Swift/branch/master) ![](https://img.shields.io/badge/Swift-5.0-blue.svg?style=flat) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 =================
 Convenience method for creating autoreleased color using RGBA hex string.
 
@@ -33,6 +33,10 @@ Convenience method for creating autoreleased color using RGBA hex string.
         let androidFrontColor = UIColor(rgba)
     }
 ```
+## Release Notes
+
+* Upgrade to Swift 5.
+* macOS gets supported.
 
 ## Installation
 
@@ -43,7 +47,7 @@ Simply add the following lines to your `Podfile`:
 # required by CocoaPods 0.36.0.rc.1 for Swift Pods
 use_frameworks! 
 
-pod 'UIColor_Hex_Swift', '~> 5.0.0'
+pod 'UIColor_Hex_Swift', '~> 5.1.0'
 ```
 
 Then import it where you use it:
@@ -58,7 +62,7 @@ import UIColor_Hex_Swift
 Simply add the following line to your `Cartfile`:
 
 ```ruby
-github "yeahdongcn/UIColor-Hex-Swift" >= 5.0.0
+github "yeahdongcn/UIColor-Hex-Swift" >= 5.1.0
 ```
 
 Then add the HexColor.framework to your frameworks list in the Xcode project.
