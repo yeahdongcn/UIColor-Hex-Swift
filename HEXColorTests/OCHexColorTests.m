@@ -23,7 +23,7 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testOC {
    CGFloat r, g, b, a;
    UIColor *hexColor = [[UIColor alloc] initWithHex3:0x000 alpha:1];
    [hexColor getRed:&r green:&g blue:&b alpha:&a];

@@ -14,6 +14,10 @@
 		65348230202464370032A09E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
 		7045417C2025CBFD00A1D3D8 /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822D202463B00032A09E /* UIColorInputError.swift */; };
 		7045417E2025CC0000A1D3D8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
+		A160F226225996EB00E8D3C3 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A160F2272259970700E8D3C3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5221BC233F80049FE14 /* UIColorExtension.swift */; };
+		A160F2282259970700E8D3C3 /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822D202463B00032A09E /* UIColorInputError.swift */; };
+		A160F2292259970700E8D3C3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
 		AA06B50A1BC225210049FE14 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; };
 		AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5151BC225210049FE14 /* HEXColorTests.swift */; };
@@ -38,6 +42,8 @@
 		56FC6F9D200DF8A400F87A72 /* OCHexColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHexColorTests.m; sourceTree = "<group>"; };
 		6534822D202463B00032A09E /* UIColorInputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorInputError.swift; sourceTree = "<group>"; };
 		6534822F202464370032A09E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A160F21E2259950200E8D3C3 /* HEXColor_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HEXColor_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A160F2212259950200E8D3C3 /* macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "macOS-Info.plist"; sourceTree = "<group>"; };
 		AA06B5061BC225210049FE14 /* HEXColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HEXColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA06B5091BC225210049FE14 /* HEXColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HEXColor.h; sourceTree = "<group>"; };
 		AA06B5101BC225210049FE14 /* HEXColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HEXColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +54,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		43BCBCB21C51BA3D00205107 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A160F21B2259950200E8D3C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				43BCBCBF1C51BAA800205107 /* iOS-Info.plist */,
+				A160F2212259950200E8D3C3 /* macOS-Info.plist */,
 				43BCBCBA1C51BA3D00205107 /* watchOS-Info.plist */,
 			);
 			name = "Supporting Files";
@@ -97,6 +111,7 @@
 				AA06B5061BC225210049FE14 /* HEXColor.framework */,
 				AA06B5101BC225210049FE14 /* HEXColorTests.xctest */,
 				43BCBCB61C51BA3D00205107 /* HEXColor.framework */,
+				A160F21E2259950200E8D3C3 /* HEXColor_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +150,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A160F2192259950200E8D3C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A160F226225996EB00E8D3C3 /* HEXColor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA06B5031BC225210049FE14 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +185,24 @@
 			name = "HEXColor-watchOS";
 			productName = "HEXColor-watchOS";
 			productReference = 43BCBCB61C51BA3D00205107 /* HEXColor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A160F21D2259950200E8D3C3 /* HEXColor-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A160F2232259950200E8D3C3 /* Build configuration list for PBXNativeTarget "HEXColor-macOS" */;
+			buildPhases = (
+				A160F2192259950200E8D3C3 /* Headers */,
+				A160F21A2259950200E8D3C3 /* Sources */,
+				A160F21B2259950200E8D3C3 /* Frameworks */,
+				A160F21C2259950200E8D3C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HEXColor-macOS";
+			productName = "HEXColor-macOS";
+			productReference = A160F21E2259950200E8D3C3 /* HEXColor_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AA06B5051BC225210049FE14 /* HEXColor-iOS */ = {
@@ -214,6 +255,10 @@
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0900;
 					};
+					A160F21D2259950200E8D3C3 = {
+						CreatedOnToolsVersion = 10.2;
+						ProvisioningStyle = Automatic;
+					};
 					AA06B5051BC225210049FE14 = {
 						CreatedOnToolsVersion = 7.0.1;
 						LastSwiftMigration = 1020;
@@ -240,12 +285,20 @@
 				AA06B5051BC225210049FE14 /* HEXColor-iOS */,
 				43BCBCB51C51BA3D00205107 /* HEXColor-watchOS */,
 				AA06B50F1BC225210049FE14 /* HEXColorTests */,
+				A160F21D2259950200E8D3C3 /* HEXColor-macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		43BCBCB41C51BA3D00205107 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A160F21C2259950200E8D3C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,6 +329,16 @@
 				43BCBCC21C51BB0100205107 /* UIColorExtension.swift in Sources */,
 				7045417C2025CBFD00A1D3D8 /* UIColorInputError.swift in Sources */,
 				7045417E2025CC0000A1D3D8 /* StringExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A160F21A2259950200E8D3C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A160F2272259970700E8D3C3 /* UIColorExtension.swift in Sources */,
+				A160F2282259970700E8D3C3 /* UIColorInputError.swift in Sources */,
+				A160F2292259970700E8D3C3 /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +417,70 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		A160F2242259950200E8D3C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "HEXColor/Resources/macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pdq.HEXColor-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A160F2252259950200E8D3C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "HEXColor/Resources/macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pdq.HEXColor-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -482,7 +609,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColor;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pdq.HEXColor-iOS";
 				PRODUCT_NAME = HEXColor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -505,7 +632,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pdq.HEXColor;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pdq.HEXColor-iOS";
 				PRODUCT_NAME = HEXColor;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -547,6 +674,15 @@
 			buildConfigurations = (
 				43BCBCBB1C51BA3D00205107 /* Debug */,
 				43BCBCBC1C51BA3D00205107 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A160F2232259950200E8D3C3 /* Build configuration list for PBXNativeTarget "HEXColor-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A160F2242259950200E8D3C3 /* Debug */,
+				A160F2252259950200E8D3C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
