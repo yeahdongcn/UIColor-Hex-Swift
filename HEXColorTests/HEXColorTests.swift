@@ -288,9 +288,12 @@ class HEXColorTests: XCTestCase {
         XCTAssertEqual("#224466", color.hexString(false))
         XCTAssertEqual("#22446688", color.hexString(true))
         
-        let hexColor = UIColor("#AABBCCDD", defaultColor: UIColor.yellow);
+        var hexColor = UIColor("#AABBCCDD", defaultColor: UIColor.yellow);
         XCTAssertEqual("#AABBCC", hexColor.hexString(false))
         XCTAssertEqual("#AABBCCDD", hexColor.hexString(true))
+        
+        hexColor = UIColor("#273448", defaultColor: UIColor.yellow);
+        XCTAssertEqual("#273448", hexColor.hexString(false))
     }
     
     // MARK: - Convert argb string to rgba string
@@ -345,7 +348,7 @@ class HEXColorTests: XCTestCase {
     }
     
     // MARK: - Hex string output for red/green/blue color
-    func testXX() {
+    func testRGB() {
         do {
             let redString = try UIColor.red.hexStringThrows(true)
             XCTAssertEqual(redString, UIColor.red.hexString(true))
