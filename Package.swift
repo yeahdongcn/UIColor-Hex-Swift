@@ -22,6 +22,11 @@ let package = Package(
             name: "HEXColor",
             dependencies: [],
             path: "HEXColor"
+        ),
+        .testTarget(
+            name: "HEXColorTests",
+            dependencies: ["HEXColor"],
+            path: "HEXColorTests"
         )
     ]
 )
