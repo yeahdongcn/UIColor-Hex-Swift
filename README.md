@@ -40,6 +40,10 @@ Convenience method for creating autoreleased color using RGBA hex string.
 
 ## Installation
 
+### [Swift Package Manager](https://github.com/apple/swift-package-manager)
+
+To add a package dependency to your Xcode project, select File > Swift Packages > Add Package Dependency and enter https://github.com/yeahdongcn/UIColor-Hex-Swift to the text field.
+
 ### [CocoaPods](http://cocoapods.org)
 
 Simply add the following lines to your `Podfile`:
@@ -47,7 +51,7 @@ Simply add the following lines to your `Podfile`:
 # required by CocoaPods 0.36.0.rc.1 for Swift Pods
 use_frameworks! 
 
-pod 'UIColor_Hex_Swift', '~> 5.1.0'
+pod 'UIColor_Hex_Swift', '~> 5.1.1'
 ```
 
 Then import it where you use it:
@@ -62,7 +66,7 @@ import UIColor_Hex_Swift
 Simply add the following line to your `Cartfile`:
 
 ```ruby
-github "yeahdongcn/UIColor-Hex-Swift" >= 5.1.0
+github "yeahdongcn/UIColor-Hex-Swift" >= 5.1.1
 ```
 
 Then add the HexColor.framework to your frameworks list in the Xcode project.
