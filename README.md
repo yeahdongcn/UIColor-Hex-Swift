@@ -9,10 +9,10 @@ Convenience method for creating autoreleased color using RGBA hex string.
 
 ```swift
     // Solid color
-    let strokeColor = UIColor("#FFCC00").CGColor 
+    let strokeColor = UIColor("#FFCC00").cgColor 
     
     // Color with alpha
-    let fillColor = UIColor("#FFCC00DD").CGColor 
+    let fillColor = UIColor("#FFCC00DD").cgColor 
 
     // Supports shorthand 3 character representation
     let backgroundColor = UIColor("#FFF") 
@@ -21,15 +21,15 @@ Convenience method for creating autoreleased color using RGBA hex string.
     let menuTextColor = UIColor("#013E") 
 
     // "#FF0000FF"
-    let hexString = UIColor.redColor().hexString()
+    let hexString = UIColor.red.hexString()
 
     // Convert shorthand 4 character representation (with alpha) from argb to rgba
-    if let rgba = "#AFFF".argb2rgba() {            
+    if let rgba = "#AFFF".argb2rgba {            
         let androidBackgroundColor = UIColor(rgba)
     }
 
     // Convert 8 character representation (with alpha) from argb to rgba
-    if let rgba = "#AAFFFFFF".argb2rgba() {        
+    if let rgba = "#AAFFFFFF".argb2rgba {        
         let androidFrontColor = UIColor(rgba)
     }
 ```
