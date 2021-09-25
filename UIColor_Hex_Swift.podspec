@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/yeahdongcn/UIColor-Hex-Swift"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "R0CKSTAR" => "yeahdongcn@gmail.com" }
-  s.ios.deployment_target     = "8.0"
+  s.ios.deployment_target     = "12.0"
   s.tvos.deployment_target    = "9.0"
   s.watchos.deployment_target = "2.1"
   s.osx.deployment_target     = "10.9"
