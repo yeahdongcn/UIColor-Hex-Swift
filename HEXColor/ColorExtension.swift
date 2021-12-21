@@ -1,6 +1,6 @@
 import SwiftUI
 
-@available(watchOSApplicationExtension 6.0, macOS 10.15, iOSApplicationExtension 13.0, *)
+@available(watchOS 6.0, macOS 10.15, iOS 13.0, *)
 extension Color {
     public init(hex3: UInt16, alpha: CGFloat = 1) {
         self.init(PlatformColor(hex3: hex3, alpha: alpha))
