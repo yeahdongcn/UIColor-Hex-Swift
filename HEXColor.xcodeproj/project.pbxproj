@@ -22,6 +22,9 @@
 		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; };
 		AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5151BC225210049FE14 /* HEXColorTests.swift */; };
 		AA06B5231BC233F80049FE14 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5221BC233F80049FE14 /* UIColorExtension.swift */; };
+		C62294E42771E8BB00E20AA1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62294E32771E8BB00E20AA1 /* ColorExtension.swift */; };
+		C62294E52771E8BB00E20AA1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62294E32771E8BB00E20AA1 /* ColorExtension.swift */; };
+		C62294E62771E8BB00E20AA1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62294E32771E8BB00E20AA1 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,7 @@
 		AA06B5151BC225210049FE14 /* HEXColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEXColorTests.swift; sourceTree = "<group>"; };
 		AA06B5171BC225210049FE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA06B5221BC233F80049FE14 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		C62294E32771E8BB00E20AA1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 				6534822D202463B00032A09E /* UIColorInputError.swift */,
 				6534822F202464370032A09E /* StringExtension.swift */,
 				43BCBCBE1C51BA9900205107 /* Supporting Files */,
+				C62294E32771E8BB00E20AA1 /* ColorExtension.swift */,
 			);
 			path = HEXColor;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				43BCBCC21C51BB0100205107 /* UIColorExtension.swift in Sources */,
 				7045417C2025CBFD00A1D3D8 /* UIColorInputError.swift in Sources */,
 				7045417E2025CC0000A1D3D8 /* StringExtension.swift in Sources */,
+				C62294E52771E8BB00E20AA1 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +345,7 @@
 				A160F2272259970700E8D3C3 /* UIColorExtension.swift in Sources */,
 				A160F2282259970700E8D3C3 /* UIColorInputError.swift in Sources */,
 				A160F2292259970700E8D3C3 /* StringExtension.swift in Sources */,
+				C62294E62771E8BB00E20AA1 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +356,7 @@
 				AA06B5231BC233F80049FE14 /* UIColorExtension.swift in Sources */,
 				6534822E202463B00032A09E /* UIColorInputError.swift in Sources */,
 				65348230202464370032A09E /* StringExtension.swift in Sources */,
+				C62294E42771E8BB00E20AA1 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
