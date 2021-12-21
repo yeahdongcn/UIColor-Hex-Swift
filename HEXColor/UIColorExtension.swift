@@ -8,14 +8,14 @@
 
 #if os(macOS)
 import Cocoa
-typealias Color = NSColor
+typealias PlatformColor = NSColor
 #else
 import UIKit
-typealias Color = UIColor
+typealias PlatformColor = UIColor
 #endif
 
 
-@objc extension Color {
+@objc extension PlatformColor {
     /**
      The shorthand three-digit hexadecimal representation of color.
      #RGB defines to the color #RRGGBB.
@@ -117,7 +117,7 @@ typealias Color = UIColor
      */
 #if os(macOS)
     public convenience init?(_ rgba: String, defaultColor: NSColor = NSColor.clear) {
-        guard let color = try? Color(rgba_throws: rgba) else {
+        guard let color = try? PlatformColor(rgba_throws: rgba) else {
             self.init(cgColor: defaultColor.cgColor)
             return
         }
@@ -125,7 +125,7 @@ typealias Color = UIColor
     }
 #else
     public convenience init(_ rgba: String, defaultColor: UIColor = UIColor.clear) {
-        guard let color = try? UIColor(rgba_throws: rgba) else {
+        guard let color = try? PlatformColor(rgba_throws: rgba) else {
             self.init(cgColor: defaultColor.cgColor)
             return
         }
