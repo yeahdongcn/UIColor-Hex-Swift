@@ -1,5 +1,5 @@
 //
-//  UIColorInputError.swift
+//  PlatformColorInputError.swift
 //  HEXColor-iOS
 //
 //  Created by Sergey Pugach on 2/2/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum UIColorInputError: Error {
+public enum PlatformColorInputError: Error {
     
     case missingHashMarkAsPrefix(String)
     case unableToScanHexValue(String)
@@ -16,7 +16,7 @@ public enum UIColorInputError: Error {
     case unableToOutputHexStringForWideDisplayColor
 }
 
-extension UIColorInputError: LocalizedError {
+extension PlatformColorInputError: LocalizedError {
     
     public var errorDescription: String? {
         switch self {

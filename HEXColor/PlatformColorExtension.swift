@@ -1,5 +1,5 @@
 //
-//  UIColorExtension.swift
+//  PlatformColorExtension.swift
 //  HEXColor
 //
 //  Created by R0CKSTAR on 6/13/14.
@@ -80,7 +80,7 @@ typealias PlatformColor = UIColor
      */
     public convenience init(rgba_throws rgba: String) throws {
         guard rgba.hasPrefix("#") else {
-            let error = UIColorInputError.missingHashMarkAsPrefix(rgba)
+            let error = PlatformColorInputError.missingHashMarkAsPrefix(rgba)
             print(error.localizedDescription)
             throw error
         }
@@ -89,7 +89,7 @@ typealias PlatformColor = UIColor
         var hexValue:  UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
-            let error = UIColorInputError.unableToScanHexValue(rgba)
+            let error = PlatformColorInputError.unableToScanHexValue(rgba)
             print(error.localizedDescription)
             throw error
         }
@@ -104,7 +104,7 @@ typealias PlatformColor = UIColor
         case 8:
             self.init(hex8: hexValue)
         default:
-            let error = UIColorInputError.mismatchedHexStringLength(rgba)
+            let error = PlatformColorInputError.mismatchedHexStringLength(rgba)
             print(error.localizedDescription)
             throw error
         }
@@ -134,7 +134,7 @@ typealias PlatformColor = UIColor
 #endif
     
     /**
-     Hex string of a UIColor instance, throws error.
+     Hex string of a PlatformColor instance, throws error.
      
      - parameter includeAlpha: Whether the alpha should be included.
      */
@@ -146,7 +146,7 @@ typealias PlatformColor = UIColor
         self.getRed(&r, green: &g, blue: &b, alpha: &a)
         
         guard r >= 0 && r <= 1 && g >= 0 && g <= 1 && b >= 0 && b <= 1 else {
-            let error = UIColorInputError.unableToOutputHexStringForWideDisplayColor
+            let error = PlatformColorInputError.unableToOutputHexStringForWideDisplayColor
             print(error.localizedDescription)
             throw error
         }
@@ -162,7 +162,7 @@ typealias PlatformColor = UIColor
     }
     
     /**
-     Hex string of a UIColor instance, fails to empty string.
+     Hex string of a PlatformColor instance, fails to empty string.
      
      - parameter includeAlpha: Whether the alpha should be included.
      */
