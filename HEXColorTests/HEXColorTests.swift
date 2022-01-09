@@ -231,11 +231,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorMissingHashMarkAsPrefix() {
         do {
             let _ = try UIColor(rgba_throws: "FFFFFFFF")
-        } catch UIColorInputError.missingHashMarkAsPrefix {
+        } catch PlatformColorInputError.missingHashMarkAsPrefix {
             XCTAssertTrue(true)
-        } catch UIColorInputError.unableToScanHexValue {
+        } catch PlatformColorInputError.unableToScanHexValue {
             XCTAssertTrue(false)
-        } catch UIColorInputError.mismatchedHexStringLength {
+        } catch PlatformColorInputError.mismatchedHexStringLength {
             XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(false)
@@ -245,11 +245,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorMismatchedHexStringLength() {
         do {
             let _ = try UIColor(rgba_throws: "#FFFFFFF")
-        } catch UIColorInputError.missingHashMarkAsPrefix {
+        } catch PlatformColorInputError.missingHashMarkAsPrefix {
             XCTAssertTrue(false)
-        } catch UIColorInputError.unableToScanHexValue {
+        } catch PlatformColorInputError.unableToScanHexValue {
             XCTAssertTrue(false)
-        } catch UIColorInputError.mismatchedHexStringLength {
+        } catch PlatformColorInputError.mismatchedHexStringLength {
             XCTAssertTrue(true)
         } catch {
             XCTAssertTrue(false)
@@ -259,11 +259,11 @@ class HEXColorTests: XCTestCase {
     func testStringInputErrorUnableToScanHexValue() {
         do {
             let _ = try UIColor(rgba_throws: "#ONMPQRST")
-        } catch UIColorInputError.missingHashMarkAsPrefix {
+        } catch PlatformColorInputError.missingHashMarkAsPrefix {
             XCTAssertTrue(false)
-        } catch UIColorInputError.unableToScanHexValue {
+        } catch PlatformColorInputError.unableToScanHexValue {
             XCTAssertTrue(true)
-        } catch UIColorInputError.mismatchedHexStringLength {
+        } catch PlatformColorInputError.mismatchedHexStringLength {
             XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(false)
@@ -332,14 +332,14 @@ class HEXColorTests: XCTestCase {
             XCTAssertEqual("", color.hexString(true))
             do {
                 let _ = try color.hexStringThrows(true)
-            } catch UIColorInputError.unableToOutputHexStringForWideDisplayColor {
+            } catch PlatformColorInputError.unableToOutputHexStringForWideDisplayColor {
                 XCTAssertTrue(true)
             } catch {
                 XCTAssertTrue(false)
             }
             do {
                 let _ = try color.hexStringThrows(false)
-            } catch UIColorInputError.unableToOutputHexStringForWideDisplayColor {
+            } catch PlatformColorInputError.unableToOutputHexStringForWideDisplayColor {
                 XCTAssertTrue(true)
             } catch {
                 XCTAssertTrue(false)

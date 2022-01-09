@@ -1,5 +1,5 @@
 //
-//  UIColorExtension.swift
+//  PlatformColorExtension.swift
 //  HEXColor
 //
 //  Created by R0CKSTAR on 6/13/14.
@@ -8,14 +8,14 @@
 
 #if os(macOS)
 import Cocoa
-typealias Color = NSColor
+typealias PlatformColor = NSColor
 #else
 import UIKit
-typealias Color = UIColor
+typealias PlatformColor = UIColor
 #endif
 
 
-@objc extension Color {
+@objc extension PlatformColor {
     /**
      The shorthand three-digit hexadecimal representation of color.
      #RGB defines to the color #RRGGBB.
@@ -80,7 +80,7 @@ typealias Color = UIColor
      */
     public convenience init(rgba_throws rgba: String) throws {
         guard rgba.hasPrefix("#") else {
-            let error = UIColorInputError.missingHashMarkAsPrefix(rgba)
+            let error = PlatformColorInputError.missingHashMarkAsPrefix(rgba)
             print(error.localizedDescription)
             throw error
         }
@@ -89,7 +89,7 @@ typealias Color = UIColor
         var hexValue:  UInt32 = 0
         
         guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
-            let error = UIColorInputError.unableToScanHexValue(rgba)
+            let error = PlatformColorInputError.unableToScanHexValue(rgba)
             print(error.localizedDescription)
             throw error
         }
@@ -104,7 +104,7 @@ typealias Color = UIColor
         case 8:
             self.init(hex8: hexValue)
         default:
-            let error = UIColorInputError.mismatchedHexStringLength(rgba)
+            let error = PlatformColorInputError.mismatchedHexStringLength(rgba)
             print(error.localizedDescription)
             throw error
         }
@@ -117,7 +117,7 @@ typealias Color = UIColor
      */
 #if os(macOS)
     public convenience init?(_ rgba: String, defaultColor: NSColor = NSColor.clear) {
-        guard let color = try? Color(rgba_throws: rgba) else {
+        guard let color = try? PlatformColor(rgba_throws: rgba) else {
             self.init(cgColor: defaultColor.cgColor)
             return
         }
@@ -125,7 +125,7 @@ typealias Color = UIColor
     }
 #else
     public convenience init(_ rgba: String, defaultColor: UIColor = UIColor.clear) {
-        guard let color = try? UIColor(rgba_throws: rgba) else {
+        guard let color = try? PlatformColor(rgba_throws: rgba) else {
             self.init(cgColor: defaultColor.cgColor)
             return
         }
@@ -134,7 +134,7 @@ typealias Color = UIColor
 #endif
     
     /**
-     Hex string of a UIColor instance, throws error.
+     Hex string of a PlatformColor instance, throws error.
      
      - parameter includeAlpha: Whether the alpha should be included.
      */
@@ -146,7 +146,7 @@ typealias Color = UIColor
         self.getRed(&r, green: &g, blue: &b, alpha: &a)
         
         guard r >= 0 && r <= 1 && g >= 0 && g <= 1 && b >= 0 && b <= 1 else {
-            let error = UIColorInputError.unableToOutputHexStringForWideDisplayColor
+            let error = PlatformColorInputError.unableToOutputHexStringForWideDisplayColor
             print(error.localizedDescription)
             throw error
         }
@@ -162,7 +162,7 @@ typealias Color = UIColor
     }
     
     /**
-     Hex string of a UIColor instance, fails to empty string.
+     Hex string of a PlatformColor instance, fails to empty string.
      
      - parameter includeAlpha: Whether the alpha should be included.
      */
