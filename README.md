@@ -9,27 +9,27 @@ Convenience method for creating autoreleased color using RGBA hex string.
 
 ```swift
     // Solid color
-    let strokeColor = UIColor("#FFCC00").cgColor 
-    
+    let strokeColor = UIColor("#FFCC00").cgColor
+
     // Color with alpha
-    let fillColor = UIColor("#FFCC00DD").cgColor 
+    let fillColor = UIColor("#FFCC00DD").cgColor
 
     // Supports shorthand 3 character representation
-    let backgroundColor = UIColor("#FFF") 
+    let backgroundColor = UIColor("#FFF")
 
     // Supports shorthand 4 character representation (with alpha)
-    let menuTextColor = UIColor("#013E") 
+    let menuTextColor = UIColor("#013E")
 
     // "#FF0000FF"
     let hexString = UIColor.red.hexString()
 
     // Convert shorthand 4 character representation (with alpha) from argb to rgba
-    if let rgba = "#AFFF".argb2rgba {            
+    if let rgba = "#AFFF".argb2rgba {
         let androidBackgroundColor = UIColor(rgba)
     }
 
     // Convert 8 character representation (with alpha) from argb to rgba
-    if let rgba = "#AAFFFFFF".argb2rgba {        
+    if let rgba = "#AAFFFFFF".argb2rgba {
         let androidFrontColor = UIColor(rgba)
     }
 ```
@@ -49,9 +49,9 @@ To add a package dependency to your Xcode project, select File > Swift Packages 
 Simply add the following lines to your `Podfile`:
 ```ruby
 # required by CocoaPods 0.36.0.rc.1 for Swift Pods
-use_frameworks! 
+use_frameworks!
 
-pod 'UIColor_Hex_Swift', '~> 5.1.7'
+pod 'UIColor_Hex_Swift', '~> 5.1.8'
 ```
 
 Then import it where you use it:
@@ -66,7 +66,7 @@ import UIColor_Hex_Swift
 Simply add the following line to your `Cartfile`:
 
 ```ruby
-github "yeahdongcn/UIColor-Hex-Swift" >= 5.1.7
+github "yeahdongcn/UIColor-Hex-Swift" >= 5.1.8
 ```
 
 Then add the HexColor.framework to your frameworks list in the Xcode project.
@@ -78,4 +78,4 @@ import HEXColor
 
 ---
 
-See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes) 
+See more in [RSBarcodes_Swift](https://github.com/yeahdongcn/RSBarcodes_Swift) and [objc version](https://github.com/yeahdongcn/RSBarcodes)
