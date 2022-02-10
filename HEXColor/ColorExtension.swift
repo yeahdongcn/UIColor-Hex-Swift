@@ -1,3 +1,5 @@
+#if arch(arm64) || arch(x86_64)
+
 import SwiftUI
 
 @available(watchOS 6.0, macOS 10.15, iOS 13.0, *)
@@ -32,3 +34,5 @@ extension Color {
     }
 #endif
 }
+
+#endif
