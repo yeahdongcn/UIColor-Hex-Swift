@@ -21,11 +21,11 @@ extension Color {
     }
 
 #if os(macOS)
-    public init?(rgba: String, defaultColor: NSColor = NSColor.clear) {
+    public init(rgba: String, defaultColor: NSColor = NSColor.clear) {
         if let platformColor = PlatformColor(rgba, defaultColor: defaultColor) {
             self.init(platformColor)
         } else {
-            return nil
+            self.init(defaultColor)
         }
     }
 #else
