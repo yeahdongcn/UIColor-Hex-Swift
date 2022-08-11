@@ -214,9 +214,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA06B51A1BC225210049FE14 /* Build configuration list for PBXNativeTarget "HEXColor-iOS" */;
 			buildPhases = (
+				AA06B5031BC225210049FE14 /* Headers */,
 				AA06B5011BC225210049FE14 /* Sources */,
 				AA06B5021BC225210049FE14 /* Frameworks */,
-				AA06B5031BC225210049FE14 /* Headers */,
 				AA06B5041BC225210049FE14 /* Resources */,
 			);
 			buildRules = (
