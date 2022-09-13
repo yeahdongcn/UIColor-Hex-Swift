@@ -13,6 +13,8 @@
 		7045417E2025CC0000A1D3D8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
 		A160F226225996EB00E8D3C3 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A160F2292259970700E8D3C3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
+		A16F971728D075E0002F8CA7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6534822F202464370032A09E /* StringExtension.swift */; };
+		A16F971828D07889002F8CA7 /* PlatformColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FA846278AF9280039613E /* PlatformColorExtension.swift */; };
 		AA06B50A1BC225210049FE14 /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA06B5091BC225210049FE14 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA06B5111BC225210049FE14 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA06B5061BC225210049FE14 /* HEXColor.framework */; };
 		AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA06B5151BC225210049FE14 /* HEXColorTests.swift */; };
@@ -253,7 +255,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = P.D.Q.;
 				TargetAttributes = {
 					43BCBCB51C51BA3D00205107 = {
@@ -364,8 +366,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16F971828D07889002F8CA7 /* PlatformColorExtension.swift in Sources */,
 				AA06B5161BC225210049FE14 /* HEXColorTests.swift in Sources */,
 				56FC6F9E200DF8A400F87A72 /* OCHexColorTests.m in Sources */,
+				A16F971728D075E0002F8CA7 /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +444,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -473,6 +478,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
